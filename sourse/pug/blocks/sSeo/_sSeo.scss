@@ -1,0 +1,37 @@
+// start .sSeo
+.sSeo {
+	padding-top: 66px;
+	--sPB: 60px;
+	@include media-breakpoint-up(md){
+		--sPB: 72px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPB: 120px;
+	}
+	&__container{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	h2{
+		margin-left: 0;
+		font-size: 16px;
+		text-transform: none;
+		@include media-breakpoint-up(md){
+			font-size: 20px;
+		}
+		line-height: (24*0.05);
+		margin-bottom: 12px;
+	}
+
+	p{
+		font-size: 14px;
+		line-height: 1.6;
+	}
+
+	& > *:last-child{
+		margin-bottom: 0;
+	}
+
+
+} // end.sSeo

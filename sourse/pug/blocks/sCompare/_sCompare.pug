@@ -1,0 +1,78 @@
+mixin sCompare(data)
+	// start sCompare
+	+b.SECTION.sCompare.section#sCompare&attributes(attributes)
+		.container
+			+e.row.row
+				+e.title-col
+					//- +e.t-header
+					+e.t-slide-spacer
+						+e.t-slide-spacer-title товары
+
+						img(src="img/compare-img.jpg" alt="")
+					+in-c('checkbox', 'Показать только различия')
+					+e.t-header--indent.h3 Двигатель
+					+e.t-table--center
+						+e.t-item HUS Usage
+						+e.t-item Рабочий объем двигателя
+						+e.t-item Рабочий объем цилиндра
+						+e.t-item Номинальная мощность
+					+e.t-header.h3 Трансмиссия
+					+e.t-table
+						+e.t-item HUS Usage
+						+e.t-item Рабочий объем двигателя
+						+e.t-item Рабочий объем цилиндра
+						+e.t-item Номинальная мощность
+				+e.slider-col.col-md-8.col-lg-9.ms-auto
+					+e.slider-wrap
+						.swiper.sCompare-slider-js
+							.swiper-wrapper
+								+sCompareSlide('true', false, '')
+								+sCompareSlide()
+								+sCompareSlide()
+								+sCompareSlide()
+						+arrow('d-none d-md-flex')
+	// end sCompare
+
+mixin sCompareSlide(active, tag=false, code='JR3050T',name='Молоток отбойный легкий')
+	.swiper-slide
+		+e.item
+			+e.img(href="#")
+				img(loading="lazy" src=`img/@2x/hit-1.jpg` alt="")
+				if tag
+					+e.tag Новинка
+			if active
+				+e.links
+					+e.compare.active(href="#")
+						+icon('bars')
+					+e.bookmarks.active(href="#")
+						+icon('heart')
+			else
+				+e.links
+					+e.compare(href="#")
+						+icon('bars')
+					+e.bookmarks(href="#")
+						+icon('heart')
+			+e.wrap
+				+e.name(href='#')=name 
+				+e.footer-row.row
+					.col
+						+e.price-bl
+							+e.price--old 18 500 ₽
+							+e.price--new 16 500 ₽
+					.col-auto
+						+e.btn(href='#')
+							+icon("icon_bag")
+		+e.content
+			if block
+				block
+			else
+				+e.s-table
+					+e.s-item Occasional use
+					+e.s-item 21.7 см³
+					+e.s-item: +icon('check')
+					+e.s-item 0.6 кВт
+				+e.s-table
+					+e.s-item Occasional use
+					+e.s-item 21.7 см³
+					+e.s-item: +icon('minus')
+					+e.s-item 0.6 кВт

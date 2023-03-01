@@ -1,0 +1,57 @@
+mixin sConfirm(logo)
+	// start sConfirm
+	+b.sConfirm.section#sConfirm&attributes(attributes)
+		.container
+			if logo
+				+e.box.text-center
+					//- +e.logo.d-none.d-md-flex
+					//- 	img(loading="lazy" src="img/@2x/order-logo.png" alt="")
+					+e.title.h2 Заказ оформлен
+					+e.txt
+						+e.txt-item
+							| Номер Вашего заказа:
+							|
+							span № 121212
+						+e.txt-item
+							| Итоговая сумма заказа: #[span 33 294 ₽]
+					+e.btn(href='#').btn.btn-primary Перейти к оплате
+			else
+				+e.box--2.text-center
+					//- img.logo( src="img/@2x/order-logo-2.png" alt="")
+					+e.title.h2 Заказ оформлен
+					+e.txt
+						+e.txt-item
+							| Номер Вашего заказа:
+							|
+							span № 121212
+						+e.txt-item
+							| Итоговая сумма заказа: #[span 33 294 ₽]
+					+e.btn(href='#').btn.btn-white Перейти к оплате
+	// end sConfirm
+
+mixin sConfirm2(logo)
+	// start sConfirm
+	+b.sConfirm.section#sConfirm&attributes(attributes)
+		.container
+			if logo
+				+e.box.text-center 
+					+e.title Заказ  оплачен
+					+e.txt.mb-12
+						+e.txt-item Номер заказа: #[span № 121212]
+					+e.await Ожидайте подтверждения заказа в ближайшее время. #[span Спасибо за покупку!]
+					+e.btns-row.row.justify-content-center
+						.col-12
+							+e.btn(href='#').btn.btn-white Перейти к оплате
+						.col-12
+							+e.btn(href='#').btn.btn-outline-white Вернуться в каталог
+			else
+				+e.box--2.text-center.mb-36 
+					+e.title Заказ  оплачен
+					+e.txt.mb-12
+						+e.txt-item Номер заказа: #[span № 121212]
+					+e.await Ожидайте подтверждения заказа в ближайшее время. #[span Спасибо за покупку!]
+					+e.btns-row.row.justify-content-center
+						.col-12
+							+e.btn(href='#').btn.btn-white Перейти к оплате
+						.col-12
+							+e.btn(href='#').btn.btn-outline-white Вернуться в каталог

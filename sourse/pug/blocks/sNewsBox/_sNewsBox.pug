@@ -1,0 +1,23 @@
+mixin sNewsBox(data)
+	// start sNewsBox
+	+b.SECTION.sNewsBox.section#sNewsBox&attributes(attributes)
+		.container
+			+e.box
+				.row
+					.col-12.col-lg-2
+						+e.title-col
+							h2.mb-0 Новости
+					+e.content-col.col
+						+e.items
+							+NewsBoxItem('01 Января, 2020', 'Варианты подарков на Новый Год? Конечно же инструмент и аксессуары от HiKOKI!')
+							+NewsBoxItem('19 Декабря, 2019', 'New power tools catalogue 2020 – 2021 now available.')
+							+NewsBoxItem('11 Декабря, 2019', 'New AC brushless web page now available.')
+						+e.all-links(href='#')
+							span Все новости
+							+icon('chevron-right')
+	// end sNewsBox
+
+mixin NewsBoxItem(date, txt)
+	+e.item(href="#")
+		+e.date=date
+		+e.txt=txt	

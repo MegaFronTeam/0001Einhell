@@ -1,0 +1,145 @@
+mixin sPAcc(data)
+	// start sPAcc
+	+b.SECTION.sPAcc.section#sPAcc&attributes(attributes)
+		+e.container.container
+			+e.row.row.tabs
+				.col-lg-3.tabs__caption
+					+e.tab-btn.tabs__btn Профиль
+						+icon("user")
+					+e.tab-btn.tabs__btn.active История заказов
+					+e.tab-btn Выход
+						+icon("logout")
+				.col-lg-9.tabs__wrap
+					+e.info-content.tabs__content
+						+e.profile-txt
+							+e.p-title.h3 Учётная запись
+							+e.p-data
+								+pDataItem('ФИО', 'Иванов Инакентий Игоревич')
+								+pDataItem('Телефон', '+7 (916) 176-05-12')
+								+pDataItem('Почта', 'ivanov.i@gmail.com')
+								+pDataItem('Пароль', '•••••••••••••')
+							+e.change-btn.btn-primary(type="button") Изменить
+						+e.change-box
+							+form-wrap()
+								+e.inputs
+									+input('', 'text', 'ФИО', 'name', true)(value="Иванов Инакентий Игоревич")
+									+input('', 'tel', 'Телефон', 'tel', true)(value="79161760512")
+									+input('', 'email', 'Почта', 'mail', true)(value="ivanov.i@gmail.com")
+									+input('', 'password', 'Пароль', 'pass', true)(value="1234567890111")
+									+input('', 'password', 'Потвторить пароль', 'pass-repeat', true)(value="1234567890111")
+								+e.btns-row.row
+									.col-sm-6.col-md-auto
+										+e.btn--save.btn-primary(type="submit") Сохранить
+									.col-sm-6.col-md-auto
+										+e.btn--cancel(type="button") Отмена
+						+e.profile-txt
+							+e.p-title.h3 Адрес доставки
+							+e.p-data
+								+pDataItem('Город', 'Москва')
+								+pDataItem('Адрес', '1117463, Паустовского, 4')
+							+e.change-btn.btn-outline-primary(type="button") Отмена
+					.tabs__content.active
+						+pAccOrders()
+
+	// end sPAcc
+
+mixin pDataItem(name,val)
+	+e.pd-row.row
+		+e.pd-name.col-auto=name
+		+e.pd-val.col=val
+
+mixin pAccOrders()
+	+b.pa-orders
+		+e.title.h3 Заказы
+		+e.items.pa-orders-dd-js
+			+pAccOrdersItem()
+			+pAccOrdersItem()
+			+pAccOrdersItem()
+			+pAccOrdersItem('active')
+
+mixin pAccOrdersItem(activeClasses)
+	+e.item(class=activeClasses)
+		+e.head.dd-head-js
+			+e.h-main-row.row.align-items-center
+				.col
+					+e.h-sub-row.row.align-items-center
+						+e.num-col.col-md Заказ №121212
+						+e.date-col.col-md 12.03.2020
+						+e.price-col.col-md 33 294  ₽
+				+e.status-col.col-auto В работе
+				.col-auto
+					+e.chevron
+						+icon('chevron-down')
+		+e.content.dd-content-js(class=activeClasses)
+			+e.top-box
+				+e.btns.row
+					.col-auto
+						+e.btn.btn.btn-primary(href="#") оплатить заказ
+						
+					.col-auto
+						+e.btn.btn.btn-light(href="#") повторить заказ
+				+e.t-row.row
+					+e.tl-col.col-md-auto
+						+e.t-title Информация о заказе
+						+e.t-info
+							+tInfoItem('Статус заказа', 'На доставке')
+							+tInfoItem('Способ доставки', 'Почтой России')
+							+tInfoItem('Стоимость доставки', '500 ₽')
+							+tInfoItem('Адрес доставки', '1117463, г.Москва,<br>улица Паустовского, 4')
+							+tInfoItem('ФИО получателя', 'Иванов Инакентий Игоревич')
+							+tInfoItem('Телефон', '+7 (916) 176-05-12')
+							+tInfoItem('Почта', 'ivanov.i@gmail.com')
+					+e.tr-col.col-md
+						+e.t-title Статус доставки
+						+e.t-dates
+							+tDateItem('02.03.2020', 'Доставлен').active
+							+tDateItem('02.03.2020', 'Ждёт в магазине').active
+							+tDateItem('02.03.2020', 'В пути')
+							+tDateItem('02.03.2020', 'Отправляем')
+							+tDateItem('02.03.2020', 'Собираем')
+				+e.goods
+					+e.g-title
+						h4 Товары в заказе
+					+e.g-items
+						+goodsItem(1)
+						+goodsItem(2)
+						+goodsItem(120)
+			+e.foot
+				+e.f-data.ms-auto
+					+fDataItem('Товары', '99')
+					+fDataItem('Вес', '30 кг')
+					+fDataItem('Скидка', '-11 890 ₽', 'text-primary pb-12')
+					+fDataItem('ИТОГО', '33 294  ₽', 'huge-row')
+
+mixin goodsItem(amount='1')
+	+b.g-item
+		+e.row.row.align-items-center
+			+e.img-col.col-auto
+				+e.img(href='#' target="_blank")
+					img(loading="lazy" src="img/@2x/category-7.png" alt="")
+			+e.txt-col.col-auto
+				+e.title(href='#' target="_blank") Шуруповерт с 6 положениями регулировки
+				+e.code FS2700
+			+e.amount-col.col-auto=`× ${amount}`
+			+e.col-with-row.col
+				+e.inner-row.row.align-items-center
+					.col-md-auto
+						+e.price--old 18 500 ₽
+						+e.price--new 16 500 ₽
+
+mixin tInfoItem(key,val)
+	+e.ti-row.row
+		+e.ti-key-col.col-xl-auto!= key
+		+e.ti-val-col.col-xl!= val
+
+mixin tDateItem(date,status)
+	+e.td-row.row
+		+e.td-date-col.col-xl-auto
+			+e.td-ball&attributes(attributes)
+			span=date
+		+e.td-status-col.col-xl=status
+
+mixin fDataItem(key,val, addClasses)
+	+e.fd-row.row(class=addClasses)
+		+e.fd-key-col.col=key
+		+e.fd-val-col.col-auto=val

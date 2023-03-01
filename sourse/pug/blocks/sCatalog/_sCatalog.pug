@@ -1,0 +1,146 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Хиты продаж
+	// end sCatalog
+
+mixin sCatalogNew(title='Хиты продаж')
+	// start sCatalog
+	+b.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title
+				h2!= title
+			+e.slider-wrappper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+item-prod('1', 'slider', 'Винтовёрт аккумуляторный импульсный PXC TE-CI 18 Li Brushless-Solo','','','toBookmark')
+						+e.slide.swiper-slide
+							+item-prod('2', 'slider', 'CB18DBL', 'PXC TE-CI 18 Li Brushless-PXC GE-CM 18/33 Li (1x4,0Ah)','','toCompare')
+						+e.slide.swiper-slide
+							+item-prod('2', 'slider', 'CD3605DA')
+						+e.slide.swiper-slide
+							+item-prod('2', 'slider', 'CD3605DA')
+						+e.slide.swiper-slide
+							+item-prod('2', 'slider')
+				+arrow('d-none d-sm-flex')
+
+mixin item-prod(i, slider, code='VB3616DA', t="MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender", hasOldPrice=true, toCompare, toBookmark)
+	+b.prod-item&attributes(attributes)
+		+e.links
+			if toCompare
+				+e.compare.--active(href="#")
+					+icon('bars')
+			else
+				+e.compare(href="#")
+					+icon('bars')
+			if toBookmark
+				+e.bookmarks.--active(href="#")
+					+icon('icon-favorite-default')
+			else
+				+e.bookmarks(href="#")
+					+icon('icon-favorite-default')
+		block
+		+e.A.img-link(href="#")
+			+e.img-wrap
+				.img-wrap-center
+					img(src=`img/@2x/hit-${i}.png`, alt="", loading="lazy")
+			//- +e.code=code
+		+e.box
+			+e.title= t
+			.row.align-items-end
+				.col
+					+e.price-wrap.row
+						if hasOldPrice
+							.col-auto
+								+e.price--old 28 400 ₽
+						.col-auto
+							+e.price--new 24 600 ₽
+				.col-auto
+					+e.btn(href="#")
+						+icon("icon_bag")
+
+mixin sCatalogFromArticle()
+	// start sCatalog
+	+b.sCatalog--familiar#sCatalog&attributes(attributes)
+		+b.section-title
+			h2 Товары из статьи
+		+e.slider-wrappper
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+item-prod('1', 'slider', 'JR3050T', 'Молоток отбойный легкий','toCompare')
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'JR3050T', 'Шуруповерт с 6 положениями регулировки','','toBookmark')
+							//- +e.badge.bg-red Новинка
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'JR3050T', 'Сабельная пила')
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'JR3050T' , 'Сабельная пила')
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider')
+			+arrow('d-none d-sm-flex')
+
+mixin sCatalogAlso()
+	// start sCatalog
+	+b.sCatalog--also.section#sCatalog&attributes(attributes)
+		+b.section-title
+			h2 С этим товаром покупают
+		+e.slider-wrappper
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+item-prod('1', 'slider', 'VB3616DA')
+							+e.badge.bg-red Новинка
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'CB18DBL', 'Cordless Band Saw')
+							+e.badge.bg-red Новинка
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'CD3605DA')
+							+e.badge.bg-red Новинка
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'CD3605DA')
+							+e.badge.bg-red Новинка
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider')
+							+e.badge.bg-red Новинка
+			+arrow('d-none d-sm-flex')
+
+mixin sCatalogSimilar()
+	// start sCatalog
+	+b.sCatalog--similar.section#sCatalog&attributes(attributes)
+		+b.section-title
+			h2 С этим товаром покупают
+		+e.slider-wrappper
+			+e.slider--js.swiper
+				.swiper-wrapper.has-plus-btn
+					-for (var i=0; i < 6; i++)
+						+e.slide.swiper-slide
+							+itemProdLong()
+			+arrow('d-none d-sm-flex d-md-none')
+		.text-center.d-none.d-md-block
+			+e.plus-btn.plus-btn-js
+				+icon('plus')
+
+mixin sCatalogMayNeed()
+	// start sCatalog
+	+b.sCatalog.section.pb-0#sCatalog&attributes(attributes)
+		+b.section-title
+			h2 Вам может пригодиться
+		+e.slider-wrappper
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+item-prod('1', 'slider', 'VB3616DA')
+							+e.badge.bg-red Новинка
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'CB18DBL', 'Cordless Band Saw')
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'CD3605DA')
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider', 'CD3605DA')
+					+e.slide.swiper-slide
+						+item-prod('2', 'slider')
+			+arrow('d-none d-lg-flex')

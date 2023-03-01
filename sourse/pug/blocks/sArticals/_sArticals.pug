@@ -1,0 +1,48 @@
+mixin sArticals()
+	// start sArticals
+	+b.SECTION.sArticals.section#sArticals&attributes(attributes)
+		.container
+			+b.section-title
+				.row.align-items-center
+					.col
+						h2.mb-0 Это интересно
+					.col-auto
+						+e.all-links(href='#') Все статьи
+			+e.row.row
+				+itemNews("1",'Заголовок SEO текста', 'Позаботьтесь о тепле', 'col-md-4')
+				+itemNews("2",'Заголовок SEO текста', descr, 'col-md-4')
+				+itemNews("3",'Заголовок SEO текста', descr, 'col-md-4')
+	// end sArticals
+
+mixin itemNews(i ,t="Заголовок SEO текста",descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col-sm-6 col-lg-4')
+	+e.col(class=bootClasses)&attributes(attributes)
+		+e.wrap
+			+e.img-wrap(href="#")
+				img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
+				+e.date 11-04-2022
+			+e.text-wrap
+				+e.title(href="#")=t
+				//- +e.tag Событие
+				+e.descr!= descr
+				//- +e.more(href='#') Читать дальше
+				//- 	+icon('chevron-right')
+
+mixin sArticalsPage()
+	// start sArticals
+	+b.sArticals--page.section#sArticals&attributes(attributes)
+		.container
+			+e.image-wrap
+				+pic('news-bg.jpg', 'bg', 0)
+				//- +e.head-title новости
+			+e.row.row
+				+itemNews("1")
+				+itemNews("2")
+				+itemNews("3")
+				+itemNews("1")
+				+itemNews("2")
+				+itemNews("3")
+				+itemNews("1")
+				+itemNews("2")
+				+itemNews("3")(class="d-none d-lg-block")
+			.text-center
+				+pugin

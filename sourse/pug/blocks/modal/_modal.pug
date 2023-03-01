@@ -1,0 +1,110 @@
+mixin modal()
+	//  start modals
+	.d-none
+		+b.modal-win.text-center(id="modal-city")
+			+e.title Ваш город Москва?
+			.row
+				.col-6
+					+e.btn(type="button") Да
+				.col-6
+					+e.btn-outline(type="button") Нет
+		// #modal-city
+		+b.modal-win.text-center(id="modal-prod-add")
+			+e.title Товар добавлен в корзину
+			.row
+				.col-6
+					+e.btn(type="button") Оформить
+				.col-6
+					+e.btn-outline(type="button") Продолжить
+		//#modal-prod-add
+		+b.modal-win.--goods.text-center(id="modal-prod-added")
+			+e.title Товар добавлен в корзину
+			.row
+				.col-12.col-sm-6
+					+e.btn-outline.btn-resume(type="button") Продолжить покупки
+				.col-12.col-sm-6
+					+e.btn(type="button") Перейти в корзину
+			mixin addedItem(img="1",title="Шуруповерт с 6 положениями регулировки",number="FS2700", sale, oldPrice="18 500 ₽",newPrice="16 500 ₽")
+				+b.added-item
+					+e.img-wrap
+						+img(`img/@2x/added-item-${img}.jpg`)
+					+e.name
+						+e.title(href="#")!= title
+						+e.number= number
+					+e.price
+						if sale 
+							+e.old-price= oldPrice
+							+e.new-price= newPrice
+						else
+							+e.new-price= newPrice
+					+btn('В корзину').btn.btn-primary
+			+addedItem()
+			+addedItem('1','Шуруповерт с 6 положениями регулировки','FS2700','sale','18 500 ₽','16 500 ₽')
+			+addedItem()
+			+addedItem()
+			+addedItem()
+			+addedItem()
+		//#modal-prod-added
+		+b.modal-win(id="modal-call")
+			+form-wrap()
+				.modal-win__title.text-center.mb-24 Заказ звонка
+				+e.inputs
+					+input("","tel",'Телефон*')(required class="valid")
+					+input("","text",'Ваше Имя*')(required class="invalid")
+				.text-center
+					input.btn.btn-primary.disabled.mb-12(type="submit" value="Перезвоните мне")
+					+polite()
+		// #modal-call
+		+b.modal-win(id="modal-inner")
+			+form-wrap()
+				.modal-win__title.text-center.mb-24 Авторизация
+				+input("","email",'Эл. почта*')(required)
+				+input("","password",'Пароль*')(required)
+				.text-center
+					+e.forgot.d-block.mb-24(href="#") Забыли пароль?
+					.row
+						.col-6
+							button.modal-win__btn(type="button") Войти
+						.col-6
+							button.modal-win__btn-outline(type="button") Регистрация
+		// #modal-inner
+		+b.modal-win(id="modal-reg")
+			+form-wrap()
+				.text-center
+					.modal-win__title.mb-24 Регистрация
+				+e.inputs.pb-60
+					+input("","email",'Эл. почта*')(required)
+					+input("","password",'Пароль*')(required)
+					+input("","password",'Повторить пароль*')(required class="border-danger text-danger")
+					.invalid-alert.text-danger.small Пароли не совпадают
+				.text-center
+					button.btn.btn-primary.disabled(type="submit") Зарегистрироваться
+		// #modal-reg
+		+b.modal-win(id="modal-order-request")
+			+form-wrap()
+				.modal-win__title.text-center.mb-24 Запрос счёта
+				+e.inputs
+					+input('', 'text', 'ФИО*', 'user-name')(required)
+					+input('', 'tel', 'Телефон*', 'phone')(required)
+					+input('', 'email', 'Электронная почта*')(required)
+				.tabs
+					.tabs__caption.row
+						.col-6
+							.tabs__btn.active Заполнить реквизиты
+						.col-6
+							.tabs__btn Загрузить реквизиты
+					.tabs__wrap
+						.tabs__content.active
+							+e.inputs
+								+input('', 'text', 'Корр. счёт', 'account-1')
+								+input('', 'text', 'Расч. счёт', 'account-2')
+								+input('', 'email', 'E-mail*')(required)
+						.tabs__content.pb-24
+							+e.input-title.file-headline Прикрепить файл
+							#props-dz.dropzone()
+								.fallback
+									input(name='file', type='file', multiple='')
+				.text-center
+					button.btn.btn-primary.disabled.mb-12(type="submit") Отправить
+					+polite()
+// end modals

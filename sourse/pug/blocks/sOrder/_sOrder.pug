@@ -1,0 +1,253 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.sOrder.section#sOrder&attributes(attributes)
+		.container
+			//- block
+			//- +b.section-title.light.long
+			//- 	h2 Оформление
+			+e.row.row
+				.col-lg-7
+					+e.login-txt.h3 Авторизация
+					+e.login-sm
+						| Если у Вас есть аккаунт авторизуйтесь на сайте. Мы сохраним всю информацию по заказу
+						|
+						br.d-none.d-sm-block
+						| и автоматически заполним ваши контактные данные.
+					//- +e.login-btn(href='#') Авторизоваться
+					+e.login-btn(href='#').btn.btn-primary Авторизоваться
+					//-1
+					+e.big-title.h3 Контактные данные
+					+e.content
+						+form-wrap
+							+input('', 'text', 'ФИО*', 'name')
+							+input('', 'tel', 'Телефон*', 'tel')
+								+icon('icon-check-ok')
+							+input('', 'email', 'E-mail*', 'email')
+								+icon('icon-check-not-ok')
+					//-2
+					+e.big-title.h3 Способ получения
+					+e.content
+						+form-wrap
+							.form-wrap__input-wrap.form-group
+								label
+									span.form-wrap__input-title Город*
+									#sls-78775.bx-sls
+										.dropdown-block.bx-ui-sls-input-block.form-control
+											span.dropdown-icon
+											input.dropdown-field(type='text' autocomplete='off' name='ORDER_PROP_7' value='' placeholder='Введите название ...' style='display: none;')
+											.bx-ui-sls-container(style='margin: 0px; padding: 0px; border: none; position: relative;')
+												input.bx-ui-sls-route(type='text' disabled='disabled' autocomplete='off' style='padding: 0px; margin: 0px;')
+												input.bx-ui-sls-fake(type='text' autocomplete='off' value='' placeholder='Введите название ...')
+											.dropdown-fade2white
+											.bx-ui-sls-loader
+											.bx-ui-sls-clear(title='Отменить выбор' style='display: none;')
+											.bx-ui-sls-pane(style='overflow: hidden auto; display: block; bottom: auto;')
+												.bx-ui-sls-variants
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															span Мос
+															| альск, Мосальский район, Калужская область, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															span Мос
+															| ква, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															span Мос
+															| ковский, Москва, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															| Зеленоград, 
+															span Мос
+															| ква, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															| Троицк, 
+															span Мос
+															| ква, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															| Щербинка, 
+															span Мос
+															| ква, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															| Климовск, 
+															span Мос
+															| ковская область, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															| Долгопрудный, 
+															span Мос
+															| ковская область, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															| Королев, 
+															span Мос
+															| ковская область, Россия
+													.dropdown-item.bx-ui-sls-variant
+														span.dropdown-item-text
+															| Дзержинский, 
+															span Мос
+															| ковская область, Россия
+										.bx-ui-sls-error-message(style='display: none;')
+									script.
+										if (!window.BX && top.BX)
+										window.BX = top.BX;
+										new BX.Sale.component.location.selector.search({'scope':'sls-78775','source':'/bitrix/components/bitrix/sale.location.selector.search/get.php','query':{'FILTER':{'EXCLUDE_ID':0,'SITE_ID':''},'BEHAVIOUR':{'SEARCH_BY_PRIMARY':'0','LANGUAGE_ID':'ru'}},'selectedItem':false,'knownItems':[],'provideLinkBy':'code','messages':{'nothingFound':'К сожалению, ничего не найдено','error':'К сожалению, произошла внутренняя ошибка'},'callback':'locationUpdated','useSpawn':false,'usePopup':false,'initializeByGlobalEvent':'','globalEventScope':'','pathNames':[],'types':{'1':{'CODE':'COUNTRY'},'2':{'CODE':'COUNTRY_DISTRICT'},'3':{'CODE':'REGION'},'4':{'CODE':'SUBREGION'},'5':{'CODE':'CITY'},'6':{'CODE':'VILLAGE'},'7':{'CODE':'STREET'}}});
+
+
+
+							+in-c('checkbox', 'Моего города нет в списке')
+							+e.delivery.delivery-group-dd-js
+								+e.del-row.row
+									+e.del-title.col-auto Варианты доставки
+									.col
+										+deliveryItem({
+											icon: 'car',
+											price: '500 ₽',
+											time: '1-2 дня',
+											value: 'value1',
+										})
+											| Курьерская доставка по Москве
+										+deliveryItem({
+											icon: 'plane',
+											price: '500 ₽',
+											time: 'от 1-2 дней',
+											value: 'value2',
+										})
+											| Доставка по России
+										+deliveryItem({
+											icon: 'house',
+											price: '0 ₽',
+											time: '',
+											value: 'value3',
+										})
+											| Самовывоз
+										+deliveryItem({
+											img: 'dpd',
+											price: 'от 250 ₽',
+											time: 'от 1-2 дней',
+										})
+											| Самовывоз
+											br
+											+e.SPAN.caption до пункта самовывоза
+										+deliveryItem({
+											addClasses: 'active',
+											img: 'dpd',
+											price: 'от 250 ₽',
+											time: 'от 1-2 дней',
+											ddContent: true,
+											value: 'value4',
+										})(checked)
+											| Доставка DPD
+											br
+											| до пункта самовывоза
+							+input('', 'text', 'Адрес*', 'address')
+							+input('', 'textarea', 'Ваше сообщение', 'message')
+							//-+input('', '', '', '')
+					//-
+					+e.big-title Способ оплаты
+					+e.content
+						+form-wrap
+							+e.ways-row.row
+								+wayToPay('coins', 'cash')
+									| Наличный расчет
+								+wayToPay('card', 'online')(checked)
+									| Оплата online
+								+wayToPay('blank', 'account')
+									| Оплата по счёту
+									br
+									| для юр. лиц
+					+e.foot
+						+e.f-row.row.align-items-center
+							.col-sm
+								+e.polite.text-center.text-sm-start
+									| Нажимая кнопку «Оформить заказ», вы соглашаетесь
+									|
+									br.d-sm-block.d-none
+									a(href="#") с Политикой конфиденциальности.
+							.col-sm-auto
+								+e.f-btn(href='#') Оформить
+				.col-lg-4.ms-auto
+					+orderContent2()
+					+orderContent()
+	// end sOrder
+
+mixin deliveryItem(data)
+	+e.LABEL.d-label
+		input(type="radio" class="d-none" name='delivery' value=data.value)&attributes(attributes)
+		+e.d-item(class=`${data.addClasses || ''}`)
+			+e.d-head
+				+e.d-row.row.align-items-center
+					span.col-auto.d-block
+						+e.logo
+							if data.icon
+								+icon(data.icon)
+							if data.img
+								img(loading="lazy" alt="" src=`img/svg/${data.img}.svg`)
+					+e.name-col.col.d-block
+						block
+					span.col.col-sm-auto.d-block
+						+e.d-sub-row.row.align-items-center
+							+e.d-price.col-sm-auto=data.price
+							+e.d-time.col-sm-auto=data.time
+			if data.ddContent
+				+e.d-content.active
+					+e.d-btn Выбрать ПВЗ
+
+mixin wayToPay(icon,val)
+	+e.way-col.col-md-4
+		+e.LABEL.way-label
+			input(type="radio" name="way-to-pay" value=val class="d-none")&attributes(attributes)
+			+e.way
+				+e.w-icon
+					+icon(icon)
+				+e.w-txt
+					block
+
+mixin orderContent()
+	+b.order-content
+		+e.box.order-content-dd-js
+			+e.dd-item
+				+e.dd-head.dd-head-js.h2 Состав заказа
+				+e.dd-content.dd-content-js.active
+					+e.items
+						+goodsItemAlt()
+						+goodsItemAlt()
+					+e.edit-btn(href='#') Редактировать заказ
+			+e.f-data
+				+fDataItem('Товары', '99')
+				+fDataItem('Вес', '30 кг')
+				+fDataItem('Скидка', '-11 890 ₽', 'text-primary')
+				+fDataItem('Доставка', '1500 ₽', 'pb-12')
+				+fDataItem('ИТОГО', '33 294  ₽', 'huge-row')
+
+mixin orderContent2()
+	+b.order-content--2
+		+e.box.order-content-dd-js
+			+e.dd-item
+				+e.dd-head.dd-head-js.h2 Состав заказа
+				+e.dd-content.dd-content-js.active
+					+e.f-data
+						+fDataItem('Товары', '99')
+						+fDataItem('Вес', '30 кг')
+						+fDataItem('Скидка', '-11 890 ₽', 'text-primary pb-12')
+						+fDataItem('ИТОГО', '33 294  ₽', 'huge-row')
+
+mixin goodsItemAlt(amount='2')
+	+b.g-item-alt
+		+e.row.row
+			+e.img-col.col-auto
+				+e.img(href='#' target="_blank")
+					img(loading="lazy" src="img/@2x/category-7.png" alt="")
+			+e.col-with-row.col
+				+e.inner-row.row.align-items-center
+					+e.txt-col.col-md
+						+e.tag Новинка
+						+e.title(href='#' target="_blank") MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+						+e.code VB3616DA
+					+e.col-price.col-md-auto.d-flex
+						+e.price--old 18 500 ₽
+						+e.price--new 16 500 ₽
+			+e.amount-col.col-auto.align-self-center=`× ${amount}`

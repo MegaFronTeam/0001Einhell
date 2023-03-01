@@ -1,0 +1,80 @@
+mixin sCart(data)
+	// start sCart
+	+b.sCart.section#sCart&attributes(attributes)
+		+e.container.container
+			//- block
+			//- +b.section-title.light.long
+			//- 	h2 Корзина
+			+e.main-row.row
+				.col-lg-8
+					+cartItem('Шуруповерт')
+					+cartItem('Шуруповерт с 6 положениями регулировки')
+					+cartItem('Шуруповерт с 6 положениями регулировки')
+				.col-lg-4
+					+e.box
+						+e.box-head
+
+							+e.order-txt.h2 Ваш заказ
+							+e.o-rows
+								+orderRow('Товары', '3')
+								+orderRow('Вес', '30 кг')
+								+orderRow('Скидка', '-11 890 ₽', 'text-primary')
+							+e.o-row--result.row
+								+e.result.col ИТОГО
+								+e.result.col-auto 33 294  ₽
+							+e.promo
+								+input('Промокод', 'text', false, 'promo')
+								+e.p-btn(type='button')
+									+icon('enter')
+						+e.btns-box
+							+e.bb-btn--green(href="#") Купить
+							+e.bb-btn--white(href='#') Запросить счёт
+							+e.sm.text-center Доступные способы и время доставки можно выбрать при оформлении заказа
+	// end sCart
+mixin orderRow(name,val,addClasses='')
+	+e.o-row.row
+		.col(class=addClasses)=name
+		.col-auto(class=addClasses)=val
+
+mixin cartItem(title)
+	//- +e.item
+	//- 	+e.tag Новинка
+	//- 	+e.cross(href='#')
+	//- 		+icon('cross')
+	//- 	+e.row.row
+	//- 		.col-auto
+	//- 			+e.img
+	//- 				img(loading="lazy" src='img/@2x/category-7.png' alt="")
+	//- 		.col
+	//- 			+e.inner-row.row
+	//- 				+e.txt-col.col-md
+	//- 					+e.title(href="#") Шуруповерт с 6 положениями регулировки
+	//- 					+e.code FS2700
+	//- 				+e.inp-col.col-md-auto
+	//- 					+e.inputs
+	//- 						+e.i-btn--min -
+	//- 						+e.INPUT.amount-input.form-control(type="number" value="1")
+	//- 						+e.i-btn--plus +
+	//- 				+e.price-col.col-md-auto
+	//- 					+e.price--old 18 500 ₽
+	//- 					+e.price--new 16 500 ₽
+	+e.item
+		+e.tag Новинка
+		+e.cross(href='#')
+			+icon('delete')
+		+e.wrap
+			+e.img
+				//- .img-wrap-center
+				img(loading="lazy" src='img/@2x/category-7.png' alt="")
+			+e.txt-col
+				+e.title(href="#")!= title
+				//- +e.code FS2700
+			+e.content
+				+e.inp-col
+					+e.inputs
+						+e.i-btn--min -
+						+e.INPUT.amount-input.form-control(type="number" value="1")
+						+e.i-btn--plus +
+				+e.price-col
+					+e.price--old 18 500 ₽
+					+e.price--new 16 500 ₽

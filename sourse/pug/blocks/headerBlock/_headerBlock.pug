@@ -1,0 +1,27 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+e.row 
+				+e.slider-wrap 
+					.swiper.gallery-top
+						.swiper-wrapper
+							+headerBlockSlide()
+							//- +headerBlockSlide(2)
+							+headerBlockSlide()
+							+headerBlockSlide()
+							+headerBlockSlide()
+					.swiper-pagination
+				+e.item(href="#").d-none.d-lg-block
+					+img("img/head-img-1.png")
+				+e.item(href="#").d-none.d-xl-block
+					+img("img/head-img-2.png")
+				+e.item(href="#").d-none.d-lg-block
+					+img("img/head-img-3.png")
+
+	// end headerBlock
+
+mixin headerBlockSlide(imgNum='1')
+	+e.slide.swiper-slide
+		+e.slide-link(href='#')
+			img.swiper-lazy(src=`img/header-slide-${imgNum}.png` loading="lazy" alt="")

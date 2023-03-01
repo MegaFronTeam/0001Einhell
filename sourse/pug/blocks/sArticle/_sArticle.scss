@@ -1,0 +1,147 @@
+// start .sArticle
+@use "sass:math";
+
+.sArticle {
+	--sPT: 0;
+
+
+	&__row{
+		--bs-gutter-x:20px;
+		--bs-gutter-y:24px;
+		& > *{
+			// margin-bottom: 24px;
+		}
+		// margin-bottom: -24px;
+
+		// padding-bottom: 24px;
+		// @include media-breakpoint-up(md){
+		// 	padding-bottom: 36px;
+		// }
+		// @include media-breakpoint-up(xl){
+		// 	padding-bottom: 48px;
+		// }
+	}
+	&__baner{
+		// @extend .accept-ratio-frame-nh;
+		// padding-top: math.div(360, 750) * 100%;
+		@include block(804, 360);
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: $border-radius;
+		}
+
+		margin-bottom: 24px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 36px;
+		}
+	}
+	// &__img-wrap-center {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// 	img {
+	// 		max-width: 100%;
+	// 		min-height: 100%;
+	// 	}
+	// }
+	&__date{
+		font-size: 14px;
+		line-height: math.div(17, 14);
+		color: rgba(51, 51, 51, 0.5);
+		margin-bottom: 12px;
+	}
+	&__content{
+		h2{
+			font-size: 16px;
+			@include media-breakpoint-up(md){
+				font-size: 20px;
+			}
+			line-height: 1.4;
+			margin-bottom: 24px;
+		}
+		p{
+			margin-bottom: 45px;
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__box{
+		// border-top: 4px solid $primary;
+		// border-right: 1px solid $gray-310;
+		// border-bottom: 1px solid $gray-310;
+		// border-left: 1px solid $gray-310;
+
+	}
+	&__b-item{
+		display: block;
+		background: #E7E7E7;
+		border-radius: 5px;
+		// padding-bottom: 24px;
+		margin-bottom: 20px;
+		padding: 30px;
+		border-bottom: 1px solid $gray-310;
+ 
+		&:hover{
+			& > *{
+				color: $primary;
+			}
+		}
+	}
+	&__b-date{
+		@include mt();
+		display: block;
+		font-size: 14px;
+		line-height: math.div(17, 14);
+		color: rgba(51, 51, 51, 0.5);
+		margin-bottom: 12px;
+	}
+	&__b-txt{
+		@include mt();
+		display: block;
+		font-size: 14px;
+		line-height: 1.4;
+		color: $body-color;
+		margin-bottom: 12px;
+	}
+	&__ball{
+		display: flex;
+		align-items: center;
+		// justify-content: center;
+
+		// width: 16px;
+		// height: 16px;
+		// border-radius: 50%;
+		// background-color: $primary;
+		
+		p {
+			margin-bottom: 0;
+			font-size: rem(14);
+		}
+		.icon{
+			fill: none;
+			color: $body-color;
+			// stroke: $primary;
+			stroke-width: 2px;
+			font-size: 9px;
+			margin-left: 8px;
+		}
+	}
+	&__{}
+	&__{}
+	.sCatalog {
+		padding-top: rem(9);
+	}
+} // end.sArticle
+

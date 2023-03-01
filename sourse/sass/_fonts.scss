@@ -1,0 +1,24 @@
+$default-font: 'Roboto';
+$header-font: 'Oswald';
+// // $file-form: ($file-formats: woff2 woff ttf);
+// $addr: '../fonts/';
+// $file-format: woff2;
+
+
+// // If font from googlefont, next lines remove
+
+// @include font-face ($default-font, $addr + "OpenSans-Regular", 400, $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "OpenSans-Bold", 700, $file-formats: $file-format);
+// @include font-face ($header-font, $addr + "HelveticaNeue-CondensedBold", 700,  $file-formats: woff);
+// @font-face{font-family:"Helvetica Neue LT W05_77 Bd Cn";src:url("../fonts/9bc087dd-4331-46a8-bb8e-1936a2c769f9.woff2") format("woff2"),url("../fonts/4320db6b-5701-4353-b6fb-0baadf8db16c.woff") format("woff")}
+// @font-face{font-family:"Helvetica Neue LT W07 55 Roman";src:url("../fonts/92130cb4-d99d-43aa-a0a8-2cf4451f4d6e.woff2") format("woff2"),url("../fonts/cf9b3e3a-e56a-428a-83f3-9cb745540375.woff") format("woff")}
+// font-weight helper:
+// 100 Thin
+// 200 Extra Light
+// 300 Light
+// 400 Normal
+// 500 Medium
+// 600 Semi Bold
+// 700 Bold
+// 800 Extra Bold
+// 900 Ultra Bold

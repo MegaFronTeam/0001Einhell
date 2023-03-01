@@ -1,0 +1,113 @@
+mixin sContact()
+	// start sContact
+	+b.SECTION.sContact.section#sContact&attributes(attributes)
+		.container
+			+e.head
+				+pic('contact-bg.jpg', 'bg', 0)
+				+e.title контакты
+			+e.row.row
+				.col-lg-4.order-lg-last
+					+e.item--dark
+						h1 контакты
+				.col-lg-3
+					+contactItem('Режим работы')
+						+e.table
+							+tableRow('Пн. - пт.', 'c 9:00 до 20:00 часов')
+							+tableRow('Пн. - пт.', 'c 10:00 до 18:00 часов')
+					+contactItem('Технический отдел')
+						+e.table
+							+tableRow('Пн. - пт.', 'c 9:00 до 20:00 часов')
+							+tableRow('Пн. - пт.', 'c 10:00 до 18:00 часов')
+				.col-lg-5
+					+contactItem('Телефоны')
+						+e.table--width
+							+tableRow('Отдел по работе с клиентами:', '+7 (495) 109-88-66 (многоканальный)')
+							+tableRow('Отдел технической поддержки:', '+7 (495) 109-88-66 (многоканальный)')
+							+tableRow('Сервисный<br>центр:', '+7 (495) 109-88-66 (многоканальный)')
+							+tableRow('Выдача товаров (склад):', '+7 (495) 109-88-66 (многоканальный)')
+				.col-12
+					+e.wrap
+						h3 Реквизиты
+						+e.items
+							mixin propsItem(name, info)
+								+e.props-item&attributes(attributes)
+									+e.name!= name
+									+e.info!= info
+							+e.column--first
+								+propsItem('Название', 'ООО «Makita»')
+								+propsItem('ОГРН', '1187746800845')
+								+propsItem('ИНН', '7743273314')
+								+propsItem('КПП', '771301001')
+							+e.column--second
+								+propsItem('Расч. счет', '40702810037100000151')
+								+propsItem('Банк', 'Филиал № 7701<br>Банка ВТБ (ПАО)<br>г.Москва')
+								+propsItem('Корр. счет', '30101810345250000745')
+							+e.column--third
+								+propsItem('Юр. адрес:', '127474, г. Москва,<br>ш. Дмитровское, д.62, строение 5,<br>этаж 1, помещение X, комната 1')
+						//- .sContact__items
+						//- 	.sContact__column.sContact__column--first
+						//- 		.sContact__props-item
+						//- 			.sContact__name
+						//- 				| Название
+						//- 			.sContact__info
+						//- 				| ООО «Стартул»
+						//- 		.sContact__props-item
+						//- 			.sContact__name
+						//- 				| ОГРН
+						//- 			.sContact__info
+						//- 				| 1177746214018
+						//- 		.sContact__props-item
+						//- 			.sContact__name
+						//- 				| ИНН
+						//- 			.sContact__info
+						//- 				| 9721043374
+						//- 		.sContact__props-item
+						//- 			.sContact__name
+						//- 				| КПП
+						//- 			.sContact__info
+						//- 				| 772101001
+						//- 	.sContact__column.sContact__column--second
+						//- 		.sContact__props-item
+						//- 			.sContact__name
+						//- 				| Адрес местонахождения
+						//- 			.sContact__info
+						//- 				| 109444, Москва,
+						//- 				br
+						//- 				| ул. Сормовский проезд, 11/7,
+						//- 				br
+						//- 				| первый подъезд,
+						//- 				br
+						//- 				| 3 этаж
+						//- 	.sContact__column.sContact__column--third
+						//- 		.sContact__props-item
+						//- 			.sContact__name
+						//- 				| Фактический адрес
+						//- 			.sContact__info
+						//- 				| 109444, Москва,
+						//- 				br
+						//- 				| ул. Сормовский проезд, 11/7,
+						//- 				br
+						//- 				| первый подъезд,
+						//- 				br
+						//- 				| 3 этаж
+
+						+e.btn(href="#").btn.btn-primary Скачать реквизиты
+			+b.section-title
+				h2 главный офис
+		+e.map
+			iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.5156698618516!2d37.56355966648197!3d55.85371906501976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b537a5656ddadb%3A0xcf5941a075bf386b!2z0JTQvNC40YLRgNC-0LLRgdC60L7QtSDRiC4sIDYyINGB0YLRgNC-0LXQvdC40LUgNSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyNzQ3NA!5e0!3m2!1sru!2sua!4v1616290125361!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy")
+	// end sContact
+
+mixin contactItem(title, addClasses='')
+	+e.item(class=addClasses)
+		+e.header.h3=title
+		block
+
+mixin tableRow(name, val)
+	+e.tab-row.row
+		+e.gray-col.col-auto!=name
+		if block
+			+e.white-col.col
+				block
+		else
+			+e.white-col.col!=val

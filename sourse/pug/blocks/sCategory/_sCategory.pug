@@ -1,0 +1,27 @@
+mixin sCategory()
+	// start sCategory
+	+b.SECTION.sCategory.section#sCategory&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Популярные категории
+			+e.row.row
+				+categoryItem("1","Лобзики", '')
+				+categoryItem("2","Цепные пилы", '')
+				+categoryItem("3","Пылесосы", '')
+				+categoryItem("4","Кусторезы", '')
+				+categoryItem("5","Триммеры и травокосилки", '')
+				//
+				+categoryItem("6","Рубанки", '')
+				+categoryItem("7","Рубанки", '')
+				+categoryItem("8","Строительные фены", '')
+			.text-center
+				+e.btn-more(type="button")
+					+icon("plus")
+
+mixin categoryItem(i,t, addClasses='')
+	+e.col.col-lg-3.col-sm-4.col-6(href="#" class=addClasses)
+		+e.img-wrap
+			.img-wrap-center
+				img.res-i.lazy(loading="lazy" src=`img/@2x/category-${i}.png` alt="")
+		+e.title=t
+		//-white-chevron-right

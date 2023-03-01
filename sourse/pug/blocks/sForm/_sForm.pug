@@ -1,0 +1,31 @@
+mixin sForm()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container
+			+b.section-title.long
+				h2 Форма обратной связи
+				+form-wrap
+					+e.row.row
+						.col-lg-6
+							+input('', 'text', 'ФИО*', 'full-name')
+							+input('', 'tel', 'Телефон*')
+							+input('', 'email', 'E-mail*')
+						+e.col-textarea.col-lg-6
+							+input('', 'textarea', 'Ваше сообщение', 'message')
+						.col-lg-6
+							+e.wrap
+								p Нажимая кнопку «Отправить», вы соглашаетесь с #[a(href='#') Политикой конфиденциальности.]
+								+e.btn.btn.btn-primary(type="submit") Отправить
+					//- +e.foot
+					//- 	+e.f-row.row.align-items-center
+					//- 		.col-md
+					//- 			+e.policy
+					//- 				| Нажимая кнопку «Отправить», вы соглашаетесь
+					//- 				|
+					//- 				br
+					//- 				| с
+					//- 				|
+					//- 				a(href='#') Политикой конфиденциальности.
+					//- 		.col-md-auto.text-center.text-md-start
+					//- 			+e.BUTTON.btn(type="submit") Отправить
+	// end sForm

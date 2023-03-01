@@ -1,0 +1,149 @@
+// start .sNewsBox
+@use "sass:math";
+
+.sNewsBox {
+	&__box{
+		padding-top: 28px;
+
+	}
+
+	h2{
+		position: relative;
+		padding: 10px 7px 0;
+		color: $white;
+		font-size: 16px;
+		z-index: 2;
+		line-height: 1;
+		&::before {
+			position: absolute;
+			background-color:$red;
+			content: '';
+			width: 100%;
+			height: 77%;;
+			bottom: 2px;
+			left: 0;
+			z-index: -1;
+		}
+		@include media-breakpoint-up(md){
+			font-size: 24px;
+		}
+	}
+	.row {
+		--bs-gutter-y: 15px;
+	}
+	
+	&__title-col {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 0;
+		height: 100%;
+		background: linear-gradient(135deg, #20A5B6 0%, #00869A 100%);
+		@include media-breakpoint-up(lg){
+      margin-bottom: 0;
+    }
+	}
+	&__content-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__all-links{
+		display: flex;
+		align-items: center;
+		color: #4E4E4E;
+		&:hover{
+			color: $primary;
+			.icon {
+			color: $primary;
+			}
+		}
+
+		font-size: 16px;
+		line-height: math.div(17, 14);
+
+		.icon{
+			font-size: 10px;
+			margin-left: 12px;
+			stroke: #4E4E4E;
+			fill: none;
+		}
+	}
+	//
+	&__items{
+		margin-bottom: 47px;
+		// padding: 24px 18px 25px;
+		// @include media-breakpoint-up(md){
+		// 	padding: 24px 25px 35px 28px;
+		// }
+		// @include media-breakpoint-up(xl){
+		// 	padding: 36px 51px 36px 28px;
+		// }
+	
+	}
+	&__item{
+		margin-bottom: 24px;
+		padding-bottom: 24px;
+		border-bottom: 1px solid $gray-310;
+		display: block;
+		@include media-breakpoint-up(md){
+			display: flex;
+			align-items: center;
+			margin-bottom: 19px;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+		&:last-child{
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+
+
+		&:hover{
+			& > *{
+				color: $primary!important;
+			}
+		}
+	}
+	&__date{
+		display: block;
+		@include mt();
+		flex-shrink: 0;
+		width: 137px;
+		margin-right: 12px;
+
+		line-height: math.div(17, 14);
+		color: #949494;
+
+		margin-bottom: 12px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+	}
+	&__txt{
+		@include mt();
+		display: flex;
+		font-size: 14px;
+
+		color: #4E4E4E;
+
+		&:before{
+			@include media-breakpoint-up(md){
+				content: '';
+			}
+			width: 1px;
+			background-color: $gray-310;
+			margin-right: 30px;
+		}
+
+		margin-bottom: 12px;
+		line-height: 1.37;
+		@include media-breakpoint-up(md){
+			line-height: math.div(17, 14);
+			margin-bottom: 0;
+		}
+	}
+	
+	&__{}
+} // end.sNewsBox

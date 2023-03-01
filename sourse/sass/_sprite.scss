@@ -1,0 +1,221 @@
+@use "sass:math";
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-6-dots {
+	font-size:math.div(19,10)*1rem;
+	width: math.div(18,19)*1em;
+}
+.icon-9-dots {
+	font-size:math.div(19,10)*1rem;
+	width: math.div(18,19)*1em;
+}
+.icon-angle-left {
+	font-size:math.div(14,10)*1rem;
+	width: math.div(8,14)*1em;
+}
+.icon-back {
+	font-size:math.div(10,10)*1rem;
+	width: math.div(20,10)*1em;
+}
+.icon-bars {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-blank {
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
+}
+.icon-bookmarks {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-car {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(31,18)*1em;
+}
+.icon-card {
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
+}
+.icon-cart {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-cart-regular {
+	font-size:math.div(35,10)*1rem;
+	width: math.div(41,35)*1em;
+}
+.icon-check {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-chevron-down {
+	font-size:math.div(8,10)*1rem;
+	width: math.div(14,8)*1em;
+}
+.icon-chevron-left {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(11,18)*1em;
+}
+.icon-chevron-right {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(11,18)*1em;
+}
+.icon-clock {
+	font-size:math.div(40,10)*1rem;
+	width: math.div(40,40)*1em;
+}
+.icon-clock2 {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-coins {
+	font-size:math.div(32,10)*1rem;
+	width: math.div(32,32)*1em;
+}
+.icon-cross {
+	font-size:math.div(22,10)*1rem;
+	width: math.div(22,22)*1em;
+}
+.icon-delete {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-doc {
+	font-size:math.div(34,10)*1rem;
+	width: math.div(25,34)*1em;
+}
+.icon-enter {
+	font-size:math.div(12,10)*1rem;
+	width: math.div(19,12)*1em;
+}
+.icon-exit {
+	font-size:math.div(14,10)*1rem;
+	width: math.div(14,14)*1em;
+}
+.icon-filter {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-filter-bar-icon {
+	font-size:math.div(25,10)*1rem;
+	width: math.div(30,25)*1em;
+}
+.icon-global {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
+.icon-heart {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-house {
+	font-size:math.div(22,10)*1rem;
+	width: math.div(22,22)*1em;
+}
+.icon-icon-check-not-ok {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-icon-check-ok {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-icon-favorite-default {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-icon-phone {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-icon_bag {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-lines {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-location {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-logout {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-minus {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-plane {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(23,24)*1em;
+}
+.icon-plus {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-profile {
+	font-size:math.div(40,10)*1rem;
+	width: math.div(40,40)*1em;
+}
+.icon-reset {
+	font-size:math.div(14,10)*1rem;
+	width: math.div(14,14)*1em;
+}
+.icon-share {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-share2 {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-site-map {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(19,16)*1em;
+}
+.icon-square {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-star {
+	font-size:math.div(15,10)*1rem;
+	width: math.div(16,15)*1em;
+}
+.icon-swiper-left {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(11,18)*1em;
+}
+.icon-swiper-right {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(11,18)*1em;
+}
+.icon-tel {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-user {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-vk {
+	font-size:math.div(500,10)*1rem;
+	width: math.div(500,500)*1em;
+}
+.icon-youtube {
+	font-size:math.div(500,10)*1rem;
+	width: math.div(500,500)*1em;
+}
+.icon-zoom {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}

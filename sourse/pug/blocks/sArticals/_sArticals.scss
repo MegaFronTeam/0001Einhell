@@ -1,0 +1,261 @@
+// start .sArticals
+@use "sass:math";
+
+.sArticals {
+	@include media-breakpoint-up(xl){
+		// --sPT: 40px;
+		--sPT: 0;
+	}
+
+	&--page{
+		//fight prev style
+		--sPT: 0;
+		@include media-breakpoint-up(md){
+			// --sPT: 24px;
+		}
+		@include media-breakpoint-up(xl){
+			// --sPT: 24px;
+		}
+
+		--sPB: 60px;
+		@include media-breakpoint-up(md){
+			--sPB: 72px;
+		}
+		@include media-breakpoint-up(xl){
+			--sPB: 120px;
+		}
+
+		.section-title{
+			h1{
+				font-size: 24px;
+			}
+		}
+		//
+		.sArticals__row{
+			margin-bottom: 0;
+		}
+	}
+
+	.section-title{
+		&__all-links{
+			display: flex;
+			align-items: center;
+			line-height: math.div(17, 14);
+			padding-right: 20px;
+
+			.icon{
+				font-size: 12px;
+				margin-left: 12px;
+				color: transparent;
+				stroke: $primary;
+			}
+		}
+	}
+	&__row{
+		& > *{
+			margin-bottom: 30px;
+		}
+		margin-bottom: -30px;
+		@include media-breakpoint-up(xl){
+			& > *{
+				margin-bottom: 48px;
+			}
+			margin-bottom: -48px;
+		}
+	}
+	&__date{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 130%; 
+		display: flex;
+		align-items: center;
+		text-align: center; 
+		color: #E7E7E7; 
+		background: #2A2D30;
+		border-radius: 0 $border-radius 0 0;
+		width: 120px;
+		height: 40px;
+		justify-content: center;
+	}
+	&__img-wrap{
+		@include block(392, 220);
+		// @extend .accept-ratio-frame-nh;
+		// padding-top: math.div(220, 360) * 100%;
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&:after{
+			@include mt();
+			content: 'Читать';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+
+			background-color: rgba($primary, .75);
+			color: $white;
+		}
+		&:hover{
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+	// &__img-wrap-center {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+	// 	align-items: center;
+	// 	img {
+	// 		max-width: 100%;
+	// 		min-height: 100%;
+	// 		object-fit: cover;
+	// 	}
+	// }
+	&__text-wrap {
+		padding: 20px;
+		border: 1px solid $gray-100;
+		border-top: none;
+
+		flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+	}
+	&__title{
+		font-family: $header-font;
+		font-weight: 700;
+		font-size: 20px;
+		color: #4E4E4E;
+		margin-bottom: rem(7);
+		display: inline-block;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__tag {
+		margin-bottom: 12px;
+		font-size: 14px;
+		color: #949494;
+	}
+	&__descr {
+		margin-bottom: 13px;
+		color: #4E4E4E;
+		line-height: 137%;
+
+		flex-grow: 1;
+	}
+	&__more {
+		color: $blue;
+		&:hover {
+			.icon {
+				stroke: #19697f;
+			}
+		}
+		.icon {
+			margin-left: 5px;
+			fill: none;
+			stroke: $blue;
+			font-size: 10px;
+		}
+	}
+	p{
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+	&__link{
+		display: inline-flex;
+		align-items: center;
+		.icon{
+			color: transparent;
+			stroke: $primary;
+			font-size: 1rem;
+			margin-left: rem(10);
+		}
+	}
+
+	&__plus-btn{
+		@extend .btn;
+		@extend .btn-light;
+
+		background-color: $gray-100;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+
+		.icon{
+			font-size: 24px;
+			stroke: $primary;
+			stroke-width: 2px;
+		}
+	}
+	&__image-wrap {
+		@include block(1147, 471);
+		// position: relative;
+		margin-bottom: rem(70);
+		picture {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			img {
+				max-width: 100%;
+				min-height: 100%;
+				border-radius: $border-radius
+			}
+		}
+	}
+	&__head-title {
+		@include rfs(65px);
+		color: #FFFFFF;
+		font-weight: 700;
+		font-family: $header-font;
+		position: absolute;
+		top: 50px;
+		left: 70px;
+		z-index: 2;
+		line-height: 1;
+		@include media-breakpoint-down(md) {
+			top: 0;
+			left: 20px;
+		}
+	}
+	&__wrap {
+		height: 100%;
+    display: flex;
+    flex-direction: column;
+		background: #E7E7E7;
+		border-radius: 5px;
+		position: relative;
+		overflow: hidden;
+	}
+} // end.sArticals

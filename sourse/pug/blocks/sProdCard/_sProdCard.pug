@@ -1,0 +1,283 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		.container
+			block
+			.row
+				.col-xl-8.col-lg-7
+					h1 Аккумуляторная дрель-шуруповёрт Einhell PXC TE-CD 18/50 Li BL-Solo 4513887
+				.col-xl-4.col-lg-5
+					+e.head-row.row
+						.col-auto
+							+e.head-link(href="#")
+								+icon("icon-favorite-default")
+								| В избранное
+								
+						.col-auto
+							+e.head-link(href="#")
+								+icon("bars")
+								| Сравнить
+						.col-auto
+							+e.head-link(href="#")
+								+icon("share2")
+								| Поделиться
+			+e.main-row.row
+				.col-xl-8.col-lg-7
+					+e.head-row.row
+						.col-auto
+							+e.number Артикул: 12C1467P
+						.col-auto
+							+b.stars-block
+								+icon('star').active
+								+icon('star').active
+								+icon('star').active
+								+icon('star').active
+								+icon('star')
+								+e.how-much 17 отзывов
+					+prodCardSliders()
+					+productTabs()
+				+e.side-col.col-xl-4.col-lg-5
+					+e.block--bg 
+						+e.property
+							p.available В наличии
+							p <strong>Доставка:</strong>
+							p Курьером в пределах МКАД - при сумме заказа от 1500р (от 1500р до 4999р стоимость доставки 200руб, от 5000р - бесплатно)
+							p <strong> Самовывоз бесплатно: </strong>
+							p Москва Сормовский проезд 11/7
+							p Отправка заказов по всей России
+							p #[strong Габариты в упаковке: ] 315мм x 375мм x 102мм
+							p #[strong Вес: ] 2.81кг
+							p 
+								span 12В
+								span 35 Нм
+								span 1500 об/мин
+						+buyBlock()
+					+e.block--border
+						+miniSlider()
+			+sCatalogNew('с этим товаром покупают')
+			+sCatalogNew('похожие товары')
+			.text-center
+				.sCategory__btn-more.BUTTON(type="button")
+					+icon("plus")
+					//- +tableDescr('Наличие в магазинах')
+					//- 	+tableDescrItem('Магазин Дмитровка', 'В наличии')
+					//- 	+tableDescrItem('Магазин Дмитровка', 'Под заказ')
+					//- +tableDescr('Варинаты доставки')(class="mb-12")
+					//- 	+tableDescrItem('Курьерская доставка по Москве')
+					//- 		| 1-2 дня
+					//- 		br
+					//- 		| от 200 до 500 руб.
+					//- 	+tableDescrItem('Доставка по России')
+					//- 		| от 1-2 дня
+					//- 		br
+					//- 		| от 500 руб.
+					//- 	+tableDescrItem('Самовывоз')
+					//- 		| от 250 руб.
+					//- +e.free.text-center
+					//- 	| При заказе от 5 000 руб. доставка
+					//- 	|
+					//- 	span.text-primary бесплатная
+					//- 	|. Точную стоимость доставки уточняйте у менеджера.
+	// end sProdCard
+
+mixin productTabs()
+	+b.prodTabs.tabs
+		+e.caption.tabs__caption
+			.swiper.prodTabs-caption-slider-js
+				.swiper-wrapper
+					+productTabsSlide('Описание')
+					+productTabsSlide('Характеристики', 'active')
+					+productTabsSlide('Комплектация')
+					+productTabsSlide('Принадлежности и запасные части')
+					+productTabsSlide('Отзывы','count')
+		+e.wrap.tabs__wrap
+			.tabs__content 
+				p Компактная легкая дрель-шуруповерт с&nbsp;бесщеточным двигателем и&nbsp;улучшенной защитой от&nbsp;пыли и&nbsp;грязи. Имеет 20&nbsp;установок крутящего момента, 2-х скоростной редуктор и&nbsp;подсветку рабочей зоны. Кейс, зарядное устройство, 2&nbsp;аккумулятора 4,0&nbsp;Ач.
+			.tabs__content.active
+				+e.table
+					+prodTabsTableRow('Номинальная потребляемая мощность','1100 Вт')
+					+prodTabsTableRow('Напряжение сети','220 - 240 В')
+					+prodTabsTableRow('Макс. производительность','4000 л/ч')
+					+prodTabsTableRow('Максимальная высота всасывания','Максимальная высота всасывания 8 м')
+					+prodTabsTableRow('Макс. высота подачи','Макс. высота подачи 46 м')
+					+prodTabsTableRow('Макс. давление','Макс. давление 4,6 бар')
+			.tabs__content 2
+			.tabs__content 3
+			.tabs__content
+				+b.feedback
+					+e.item
+						+e.source Отзывы с Яндекс.Маркета 
+						+e.source-link(href='#') Все отзывы на Яндекс.Маркете 
+						+e.content
+							+e.info
+								+e.user Сошников Андрей
+								+e.date 28.10.2014 | 15:47
+							+e.rating #[span Оценка пользователя:] 
+								+icon('star')
+								+icon('star')
+								+icon('star')
+								+icon('star')
+								+icon('star')
+							+e.text.--main.P Искал генератор мощностью ~6 кВт для строительства дачи и&nbsp;далее для установки как резервная станция. На&nbsp;поиски было пол года, так что в&nbsp;вопрос углубился конкретно. Первым делом рассматривал Hunday, так как фирма на&nbsp;слуху и&nbsp;постоянно видел в&nbsp;работе у&nbsp;строителей. Но&nbsp;пообщавшись с&nbsp;владельцами и&nbsp;потрогав руками в&nbsp;магазине вариант отпал сразу. Отвратительная сборка, провода висят как лапша, ломаются постоянно. Про фирму Fubag раньше вообще не&nbsp;слышал, но&nbsp;продукция заинтересовала. Начал копать и&nbsp;т.д. долго рассказывать, но&nbsp;выбор в&nbsp;данной категории единственный верный. Работает как часы. Для автозапуска требуется приобретение не&nbsp;дешового блока, но&nbsp;оно того стоит.
+							p #[span Достоинства:] Цена и качество сборки
+							p #[span Недостатки:] Пока нет
+					+e.item
+						+e.source.--makita Отзывы пользователей 
+							a(href="#") Makita.ru
+						+e.content
+							+e.info
+								+e.user Евгений
+								+e.date 28.10.2014 | 15:47
+							+e.rating #[span Оценка пользователя:] 
+								+icon('star')
+								+icon('star')
+								+icon('star','icon-star--empty')
+								+icon('star','icon-star--empty')
+								+icon('star','icon-star--empty')
+							+e.text.P Какие 6&nbsp;квт? Максимум&nbsp;4,96квт, смотрите инструксию. Врете вместе с&nbsp;фирмой производителя...
+							+e.answer
+								+e.info
+									+e.manager Петр — представитель Makito #[span в ответ Евгений]
+									+e.date 28.10.2014 | 15:47
+								+e.text.P Евгений, рекомендуем ознакомиться со&nbsp;статьей об&nbsp;максимальной и&nbsp;номинальной мощности двигателя.
+								+e.text.P Все встанет на&nbsp;свои места.
+								+e.link(href="#") https://gardengear.ru/articles/traktora/maximum_and_rated_power_of_the_engines/
+						+e.content
+							+e.info
+								+e.user Евгений
+								+e.date 28.10.2014 | 15:47
+						+e.rating #[span Оценка пользователя:] 
+							+icon('star')
+							+icon('star')
+							+icon('star','icon-star--empty')
+							+icon('star','icon-star--empty')
+							+icon('star','icon-star--empty')
+						+e.text.P Какие 6&nbsp;квт? Максимум&nbsp;4,96квт, смотрите инструксию. Врете вместе с&nbsp;фирмой производителя...
+					+e.show-more
+						+btn('Показать ещё','button')
+					+e.form
+						+e.form-title Оставить отзыв
+						+form-wrap
+							+e.rate-label Моя оценка:
+								+icon('star')
+								+icon('star')
+								+icon('star','icon-star--empty')
+								+icon('star','icon-star--empty')
+								+icon('star','icon-star--empty')
+							+e.inputs
+								+input('', 'textarea', 'Ваше сообщение', 'message')
+								+input('', 'text', 'ФИО*', 'full-name')
+								+input('', 'tel', 'Телефон*')
+								+input('', 'email', 'E-mail*')
+							+e.foot
+								+e.f-row.row.align-items-center
+									.col-md
+										+e.policy
+											| Нажимая кнопку «Отправить», вы соглашаетесь
+											|
+											br
+											| с
+											|
+											a(href='#') Политикой конфиденциальности.
+									.col-md-auto.text-center.text-md-start
+										+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить
+					
+
+
+
+mixin prodTabsTableRow(name, val)
+	+e.t-row.row
+		+e.t-name-col.col-6=name
+		+e.t-val-col.col-6=val
+
+mixin productTabsSlide(title, addClass="")
+	.swiper-slide
+		+e.btn.tabs__btn(class=addClass)=title
+
+mixin miniSlider()
+	+b.mini-slider
+		.swiper.mini-slider-js
+			.swiper-wrapper
+				+miniSlide()
+				+miniSlide()
+				+miniSlide()
+				+miniSlide()
+				+miniSlide()
+		.swiper-pagination
+
+mixin miniSlide()
+	.swiper-slide
+		+e.img(href='#')
+			.img-wrap-center
+				img(loading="lazy" src="img/@2x/mini-slide.jpg" alt="")
+
+mixin tableDescr(title)
+	+e.table-descr&attributes(attributes)
+		+e.t-head=title
+		+e.t-items
+			block
+
+mixin tableDescrItem(name, val)
+	+e.t-item.row
+		+e.t-name-col.col-6=name
+		if block
+			+e.t-val-col.col-6
+				block
+		else
+			+e.t-val-col.col-6=val
+
+mixin buyBlock()
+	+b.buy-bl--js
+		+e.close-bar.d-md-none.buy-bl-toggle-js
+			+icon('chevron-down')
+		+e.main-row.row
+			+e.price-col.col.col-md-6.col-lg-12
+				+e.price-row.row
+					.col.col-lg-12.col-xl
+						+e.price--old 18 500 ₽
+						+e.price--new 16 500 ₽
+					+e.inputs-col.col.col-lg-12.col-xl-auto
+						+e.price
+							+e.p-btn--min 
+							+e.INPUT.p-input.form-control(type='number' value="1")
+							+e.p-btn--plus
+			+e.btns-col.col-auto.col-md-6.col-lg-12
+				+e.btn-row.row
+					.col-md-6.col-lg-12
+						+e.buy-btn(href="#") в корзину
+					+e.bill-col.col-md-6.col-lg-12
+						+e.bill-btn(href="#") Запросить счёт
+			+e.open-col.col-auto.d-md-none.buy-bl-toggle-js
+				+e.open
+					span
+
+
+mixin prodCardSliders(addClasses='')
+	+b.pc-sliders--js(class=addClasses)
+		+e.row.row
+			.col-auto
+				+e.thumb-slider
+					+arrow
+					.swiper.sProdCard-thumb-js
+						.swiper-wrapper
+							- for (var x = 0; x < 10; x++)
+								+prodCardThumb(1) 
+			+e.slider-col.col
+				+e.slider
+					.swiper.sProdCard-slider-js
+						.swiper-wrapper
+							- for (var x = 0; x < 10; x++)
+								+prodCardSlide(1)
+
+mixin prodCardThumb(imgNum)
+	.swiper-slide
+		+e.th-item
+			.img-wrap-center
+				img.swiper-lazy(loading="lazy" src=`img/@2x/thumb.jpg` alt="")
+
+mixin prodCardSlide(imgNum)
+	.swiper-slide
+		+e.slide-img
+			.img-wrap-center
+				img.swiper-lazy(loading="lazy" src=`img/@2x/prod-card-img.jpg` alt="")
+
