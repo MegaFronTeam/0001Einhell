@@ -8,6 +8,7 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sArticals/_sArticals.pug
 include ../blocks/sNewsBox/_sNewsBox.pug
 include ../blocks/sSeo/_sSeo.pug
+include ../blocks/sNewsTabs/_sNewsTabs.pug
 
 block variables
 	- let  mainPage= 'page-main' 
@@ -24,7 +25,8 @@ block pagecontent
 	+headerBlock()
 	+sCatalogNew()
 	+sCatalogNew('НОВИНКИ').bg-light
-	+sArticals()
-	+sNewsBox('true')
+	+sNewsTabs
+	//- +sArticals()
+	//- +sNewsBox('true')
 	+sSeo()
 	+footer()

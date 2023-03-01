@@ -1,0 +1,24 @@
+mixin sNewsTabs(data)
+	// start sNewsTabs
+	+b.SECTION.sNewsTabs.section#sNewsTabs&attributes(attributes)
+		.container
+			.tabs
+				
+				+b.section-title.tabs__caption
+					
+					h2.tabs__btn.active новости
+					h2.tabs__btn статьи
+				.tabs__wrap
+					- for (var x = 0; x < 2; x++)
+						.tabs__content(class=`${x == 0 ? 'active' : ''}`)
+							+e.row
+								- for (var x = 0; x < 4; x++)
+									+e.col
+										+b.artical-item(href="#")
+											+e.img-wrap
+												img(src="img/img.png" laoding="lazy", alt="").res-i
+											+e.DIV.caption
+												+e.DIV.title Заголовок SEO текста
+												+e.DIV.sub-title  Событие
+												p Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой
+	// end sNewsTabs

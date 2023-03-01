@@ -299,6 +299,11 @@
 								<use xlink:href="img/svg/sprite.svg#heart"></use>
 							</svg></a>
 						</div>
+						<div class="col-auto"><a class="blue-line__cart" href="#"><span class="blue-line__cart-icon">
+							<svg class="icon icon-cart ">
+								<use xlink:href="img/svg/sprite.svg#cart"></use>
+							</svg></span><span class="blue-line__cart-txt">Корзина</span></a>
+						</div>
 						<div class="col-auto align-self-stretch">
 							<div class="blue-line__dd-btn blue-line__dd-btn--lc">
 								<div class="blue-line__user">
@@ -312,11 +317,6 @@
 									</svg><span>Выйти</span></a>
 								</div>
 							</div>
-						</div>
-						<div class="col-auto"><a class="blue-line__cart" href="#"><span class="blue-line__cart-icon">
-							<svg class="icon icon-cart ">
-								<use xlink:href="img/svg/sprite.svg#cart"></use>
-							</svg></span><span class="blue-line__cart-txt">Корзина</span></a>
 						</div>
 					</div>
 				</div>
@@ -586,13 +586,12 @@
 						</div>
 					</div>
 					<div class="mob-menu__c-item">
-						<div class="mob-menu__c-icon"><img loading="lazy" src="img/svg/icon-tel.svg" alt=""/>
+						<div class="mob-menu__c-icon">
+							<svg class="icon icon-tel ">
+								<use xlink:href="img/svg/sprite.svg#tel"></use>
+							</svg>
 						</div>
 						<div class="mob-menu__c-txt"><a href="tel:84952155063">+7 (495) 109-88-66 (многоканальный)</a>
-						</div>
-					</div>
-					<div class="mob-menu__c-item">
-						<div class="mob-menu__c-icon"><img loading="lazy" src="img/svg/icon-mail.svg" alt=""/>
 						</div>
 					</div>
 					<div class="mob-menu__c-item">
@@ -614,6 +613,8 @@
 						<div class="top-nav__burger-col col-auto d-lg-none">
 							<div class="burger burger--js"><span></span>
 							</div>
+						</div>
+						<div class="top-nav__logo-col col-auto d-md-none"><a class="top-nav__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/></a>
 						</div>
 						<div class="col align-self-stretch d-none d-lg-block">
 							<ul class="top-nav__menu">
@@ -1289,39 +1290,92 @@
 					</div>
 				</div>
 			</div>
-			<!-- start sArticals-->
-			<section class="sArticals section" id="sArticals">
+			<!-- start sNewsTabs-->
+			<section class="sNewsTabs section" id="sNewsTabs">
 				<div class="container">
-					<div class="section-title">
-						<div class="row align-items-center">
-							<div class="col">
-								<h2 class="mb-0">Это интересно</h2>
-							</div>
-							<div class="col-auto"><a class="section-title__all-links" href="#">Все статьи</a>
-							</div>
+					<div class="tabs">
+						<div class="section-title tabs__caption">
+							<h2 class="tabs__btn active">новости</h2>
+							<h2 class="tabs__btn">статьи</h2>
 						</div>
-					</div>
-					<div class="sArticals__row row">
-						<div class="sArticals__col col-md-4">
-							<div class="sArticals__wrap"><a class="sArticals__img-wrap" href="#"><img loading="lazy" src="img/@2x/artical-1.jpg" alt=""/><span class="sArticals__date">11-04-2022</span></a>
-								<div class="sArticals__text-wrap"><a class="sArticals__title" href="#">Заголовок SEO текста</a>
-									<div class="sArticals__descr">Позаботьтесь о тепле
+						<div class="tabs__wrap">
+							<div class="tabs__content active">
+								<div class="sNewsTabs__row">
+									<div class="sNewsTabs__col"><a class="artical-item" href="#"><span class="artical-item__img-wrap"><img class="res-i" src="img/img.png" laoding="lazy" alt=""/></span>
+										<div class="artical-item__caption">
+											<div class="artical-item__title">Заголовок SEO текста
+											</div>
+											<div class="artical-item__sub-title"> Событие
+											</div>
+											<p>Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой</p>
+										</div></a>
+									</div>
+									<div class="sNewsTabs__col"><a class="artical-item" href="#"><span class="artical-item__img-wrap"><img class="res-i" src="img/img.png" laoding="lazy" alt=""/></span>
+										<div class="artical-item__caption">
+											<div class="artical-item__title">Заголовок SEO текста
+											</div>
+											<div class="artical-item__sub-title"> Событие
+											</div>
+											<p>Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой</p>
+										</div></a>
+									</div>
+									<div class="sNewsTabs__col"><a class="artical-item" href="#"><span class="artical-item__img-wrap"><img class="res-i" src="img/img.png" laoding="lazy" alt=""/></span>
+										<div class="artical-item__caption">
+											<div class="artical-item__title">Заголовок SEO текста
+											</div>
+											<div class="artical-item__sub-title"> Событие
+											</div>
+											<p>Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой</p>
+										</div></a>
+									</div>
+									<div class="sNewsTabs__col"><a class="artical-item" href="#"><span class="artical-item__img-wrap"><img class="res-i" src="img/img.png" laoding="lazy" alt=""/></span>
+										<div class="artical-item__caption">
+											<div class="artical-item__title">Заголовок SEO текста
+											</div>
+											<div class="artical-item__sub-title"> Событие
+											</div>
+											<p>Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой</p>
+										</div></a>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="sArticals__col col-md-4">
-							<div class="sArticals__wrap"><a class="sArticals__img-wrap" href="#"><img loading="lazy" src="img/@2x/artical-2.jpg" alt=""/><span class="sArticals__date">11-04-2022</span></a>
-								<div class="sArticals__text-wrap"><a class="sArticals__title" href="#">Заголовок SEO текста</a>
-									<div class="sArticals__descr">Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой
+							<div class="tabs__content">
+								<div class="sNewsTabs__row">
+									<div class="sNewsTabs__col"><a class="artical-item" href="#"><span class="artical-item__img-wrap"><img class="res-i" src="img/img.png" laoding="lazy" alt=""/></span>
+										<div class="artical-item__caption">
+											<div class="artical-item__title">Заголовок SEO текста
+											</div>
+											<div class="artical-item__sub-title"> Событие
+											</div>
+											<p>Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой</p>
+										</div></a>
 									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sArticals__col col-md-4">
-							<div class="sArticals__wrap"><a class="sArticals__img-wrap" href="#"><img loading="lazy" src="img/@2x/artical-3.jpg" alt=""/><span class="sArticals__date">11-04-2022</span></a>
-								<div class="sArticals__text-wrap"><a class="sArticals__title" href="#">Заголовок SEO текста</a>
-									<div class="sArticals__descr">Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой
+									<div class="sNewsTabs__col"><a class="artical-item" href="#"><span class="artical-item__img-wrap"><img class="res-i" src="img/img.png" laoding="lazy" alt=""/></span>
+										<div class="artical-item__caption">
+											<div class="artical-item__title">Заголовок SEO текста
+											</div>
+											<div class="artical-item__sub-title"> Событие
+											</div>
+											<p>Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой</p>
+										</div></a>
+									</div>
+									<div class="sNewsTabs__col"><a class="artical-item" href="#"><span class="artical-item__img-wrap"><img class="res-i" src="img/img.png" laoding="lazy" alt=""/></span>
+										<div class="artical-item__caption">
+											<div class="artical-item__title">Заголовок SEO текста
+											</div>
+											<div class="artical-item__sub-title"> Событие
+											</div>
+											<p>Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой</p>
+										</div></a>
+									</div>
+									<div class="sNewsTabs__col"><a class="artical-item" href="#"><span class="artical-item__img-wrap"><img class="res-i" src="img/img.png" laoding="lazy" alt=""/></span>
+										<div class="artical-item__caption">
+											<div class="artical-item__title">Заголовок SEO текста
+											</div>
+											<div class="artical-item__sub-title"> Событие
+											</div>
+											<p>Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой</p>
+										</div></a>
 									</div>
 								</div>
 							</div>
@@ -1329,29 +1383,7 @@
 					</div>
 				</div>
 			</section>
-			<!-- end sArticals-->
-			<!-- start sNewsBox-->
-			<section class="sNewsBox section" id="sNewsBox">
-				<div class="container">
-					<div class="sNewsBox__box">
-						<div class="row">
-							<div class="col-12 col-lg-2">
-								<div class="sNewsBox__title-col">
-									<h2 class="mb-0">Новости</h2>
-								</div>
-							</div>
-							<div class="sNewsBox__content-col col">
-								<div class="sNewsBox__items"><a class="sNewsBox__item" href="#"><span class="sNewsBox__date">01 Января, 2020</span><span class="sNewsBox__txt">Варианты подарков на Новый Год? Конечно же инструмент и аксессуары от HiKOKI!</span></a><a class="sNewsBox__item" href="#"><span class="sNewsBox__date">19 Декабря, 2019</span><span class="sNewsBox__txt">New power tools catalogue 2020 – 2021 now available.</span></a><a class="sNewsBox__item" href="#"><span class="sNewsBox__date">11 Декабря, 2019</span><span class="sNewsBox__txt">New AC brushless web page now available.</span></a>
-								</div><a class="sNewsBox__all-links" href="#"><span>Все новости</span>
-								<svg class="icon icon-chevron-right ">
-									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-								</svg></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end sNewsBox-->
+			<!-- end sNewsTabs-->
 			<!-- start sSeo-->
 			<section class="sSeo section" id="sSeo">
 				<div class="sSeo__container container">

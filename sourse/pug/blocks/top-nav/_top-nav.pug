@@ -75,12 +75,13 @@ mixin mob-mnu()
 					| помещение X, комната 1
 			+e.c-item
 				+e.c-icon
-					img(loading="lazy" src="img/svg/icon-tel.svg" alt="")
+					+icon("tel")
+					//- img(loading="lazy" src="img/svg/icon-tel.svg" alt="")
 				+e.c-txt
 					a(href="tel:84952155063") +7 (495) 109-88-66 (многоканальный)
-			+e.c-item
-				+e.c-icon
-					img(loading="lazy" src="img/svg/icon-mail.svg" alt="")
+			//- +e.c-item
+			//- 	+e.c-icon
+			//- 		img(loading="lazy" src="img/svg/icon-mail.svg" alt="")
 				//- +e.c-txt
 				//- 	a(href="mailto:info@husq.ru") info@husq.ru
 			+e.c-item
@@ -103,7 +104,9 @@ mixin top-nav()
 				+e.burger-col.col-auto.d-lg-none
 					+b.burger--js
 						span
-				
+				+e.logo-col.col-auto.d-md-none
+					+e.logo(href="#")
+						img(src="img/logo.png" alt="" loading="lazy")
 				.col.align-self-stretch.d-none.d-lg-block
 					+e.UL.menu
 						+e.LI.item
@@ -155,18 +158,18 @@ mixin blueLine()
 				.col-auto
 					+e.icon-link(href='#')
 						+icon('heart')
-				.col-auto.align-self-stretch
-					+e.dd-btn--lc
-						+e.user
-							+icon('user')
-						span Войти
-						+lcDD()
 				.col-auto
 					+e.cart(href='#')
 						+e.cart-icon
 							+icon('cart')
 							//- +e.number 99
 						+e.cart-txt Корзина
+				.col-auto.align-self-stretch
+					+e.dd-btn--lc
+						+e.user
+							+icon('user')
+						span Войти
+						+lcDD()
 mixin cityDD()
 	+b.city-dd
 		+e.search-row.row

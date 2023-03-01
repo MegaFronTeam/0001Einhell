@@ -125,10 +125,10 @@
 				color: #fff;
 		}
 		@include media-breakpoint-up(md){
-			padding: 20px 0px;
+			padding: 19px 0px;
 		}
 		@include media-breakpoint-up(xl){
-			padding: 20px 25px;
+			padding: 19px 25px;
 		}
 		--dd-scale: 0;
 		&.active{
@@ -293,6 +293,7 @@
 		&--lc{
 			min-width: 120px;
 			padding: 8px 12px;
+			margin-left: -12px;
 
 			&> span{
 				text-transform: uppercase;
@@ -404,7 +405,7 @@
 	//cart
 	&__cart{
 		//padding: 6px 0;
-		margin-right: 23px;
+		// margin-right: 23px;
 		display: flex;
 		align-items: center; 
 		color: $body-color;
@@ -448,7 +449,10 @@
 		text-transform: uppercase;
 		line-height: math.div(14, 12);
 		color: $body-color;
-		
+
+		@include media-breakpoint-down(xl){
+			display: none;
+		}
 	}
 	&__{}
 }
@@ -726,7 +730,7 @@
 		@include mt();
 		transform: scaleY(var(--sub-list-scale));
 		transform-origin: top center;
-		background-color: $light;
+		background-color: white;
 		position: absolute;
 		top: 0;
 		left: var(--list-w);
@@ -747,7 +751,7 @@
 			color: #4E4E4E;
 			@include mt();
 			&:hover {
-				color: $blue;
+				color: $primary;
 				font-weight: 700;
 			}
 		}
@@ -791,7 +795,16 @@
 		margin-bottom: 30px;
 	}
 	&__input-wrap{
+		select{
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			// border-right: none;
+		}
+		
 		input{
+			// border-left: none;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
 			margin-left: -1px;
 		}
 	}
@@ -802,13 +815,13 @@
 	}
 	//
 	&__categories{
-
+			margin-bottom: rem(50);
 	}
 	&__c-item{
 		position: relative;
 		margin-bottom: -1px;
-		background: $gray-100;
-		border: 1px solid #D2D2D2;
+		// background: $gray-100;
+		border-bottom: 1px solid #D2D2D2;
 		padding: 15px 18px 15px 21px;
 		color: #333333;
 
@@ -817,24 +830,30 @@
 		justify-content: space-between;
 
 		.icon{
-			margin-left: 10px;
+			margin-left: 5px;
 			font-size: 12px;
-			color: transparent;
-			stroke: $white;
+			stroke: currentColor;
 			fill: none;
 			stroke-width: 2px;
+			font-size: 20px;
 		}
 	}
 	&__icon {
 		position: absolute;
-		top: 0;
+		top: 6px;
 		right: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 100%;
-		width: 46px;
-		background-color: $primary;
+		width: 36px;
+		height: 36px;
+		background: #D2D2D2;
+		color: $white;
+		&:hover{
+			background-color: $body-color;
+		}
+		border-radius: 50px;
 	}
 	&__c-txt{
 		font-size: 14px;
@@ -873,7 +892,7 @@
 	--pad-side: 20px;
 
 	&__search{
-		padding: 24px var(--pad-side, 20px);
+		padding: 23px var(--pad-side, 20px);
 	}
 	&__input-wrap{
 		margin-bottom: 12px;
@@ -952,7 +971,7 @@
 			width: 14px;
 			height: 14px;
 
-			background-image: url(../img/svg/green-chevron-right.svg);
+			background-image: url(../img/svg/chevron-right.svg);
 			background-repeat: no-repeat;
 			background-size: 12px;
 			background-position-x: 100%;
@@ -993,7 +1012,7 @@
 		&:after{
 			width: 14px;
 			height: 14px;
-			background-image: url(../img/svg/green-chevron-down.svg);
+			background-image: url(../img/svg/chevron-down.svg);
 			background-repeat: no-repeat;
 			background-position: center;
 		}
@@ -1015,7 +1034,7 @@
 		//padding: 6px 0;
 		display: flex;
 		align-items: flex-end;
-		color: $primary;
+		color: $secondary;
 		&:hover{
 			color: rgba($primary, .9);
 		}
@@ -1031,12 +1050,13 @@
 		height: 20px;
 		.icon{
 			font-size: 24px;
+			color: $secondary;
 			//color: $white;
 		}
 	}
 	&__number{
 		position: absolute;
-		color: $white;
+		color: $body-color;
 		left: 50%;
 		bottom: -2px;
 		transform: translateX(-50%);
@@ -1061,7 +1081,7 @@
 		align-items: center;
 		&--user{
 			.icon{
-				color: $primary;
+				// color: $primary;
 				font-size: 24px;
 			}
 		}
@@ -1072,17 +1092,16 @@
 				}
 			}
 
-			.icon{
-				font-size: 20px;
-				color: transparent;
-				stroke: $primary;
-			}
+		}
+		.icon{
+			font-size: 24px;
+			color: $secondary;
 		}
 		&--loc{
 
 			.icon{
-				font-size: 21px;
-				color: $primary;
+				// font-size: 21px;
+				// color: $primary;
 			}
 		}
 	}
@@ -1128,12 +1147,16 @@
 	}
 	&__c-icon{
 		flex-shrink: 0;
-		width: 18px;
-		height: 20px;
+		// width: 18px;
+		// height: 20px;
 		margin-right: 14px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		.icon{
+			color: $secondary;
+			font-size: rem(24);
+		}
 	}
 	&__c-txt{
 		font-size: 14px;
