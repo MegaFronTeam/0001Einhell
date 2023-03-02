@@ -6,7 +6,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sCategory/_sCategory.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sArticals/_sArticals.pug
-include ../blocks/sNewsBox/_sNewsBox.pug
+include ../blocks/sServises/_sServises.pug
 include ../blocks/sSeo/_sSeo.pug
 include ../blocks/sArticle/_sArticle.pug
 
@@ -15,7 +15,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Новости'
+	- let  title= 'сервисы'
 	title= title
 block pagecontent
 	//-+mob-mnu()
@@ -24,6 +24,5 @@ block pagecontent
 	+top-nav()
 	//open news page
 	+page-head(title, '', 'Главная', title)
-	+sArticle()
-	+sCatalogNew('товары из статьи')
+	+sServises
 	+footer()

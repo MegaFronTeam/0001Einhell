@@ -15,3 +15,4 @@
 12. <https://megafronteam.github.io/0001Einhell/public/09-contacts.html>
 12. <https://megafronteam.github.io/0001Einhell/public/010-news.html>
 12. <https://megafronteam.github.io/0001Einhell/public/011-article.html>
+13. <https://megafronteam.github.io/0001Einhell/public//013-servises.html>
