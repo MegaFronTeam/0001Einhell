@@ -10,7 +10,9 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/dropzone/min/dropzone.min.css" rel="stylesheet"/>
-		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
@@ -24,7 +26,7 @@
 			<div class="blue-line blue-line--js d-none d-md-block">
 				<div class="blue-line__container container">
 					<div class="blue-line__row row align-items-center">
-						<div class="blue-line__logo-col col-auto"><a class="blue-line__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/></a>
+						<div class="blue-line__logo-col col-auto"><a class="blue-line__logo" href="/"><img src="img/logo.png" alt="" loading="lazy"/></a>
 						</div>
 						<div class="col-auto align-self-stretch">
 							<div class="blue-line__dd-btn blue-line__dd-btn--loc">
@@ -614,7 +616,7 @@
 							<div class="burger burger--js"><span></span>
 							</div>
 						</div>
-						<div class="top-nav__logo-col col-auto d-md-none"><a class="top-nav__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/></a>
+						<div class="top-nav__logo-col col-auto d-md-none"><a class="top-nav__logo" href="/"><img src="img/logo.png" alt="" loading="lazy"/></a>
 						</div>
 						<div class="col align-self-stretch d-none d-lg-block">
 							<ul class="top-nav__menu">
@@ -918,118 +920,476 @@
 						<h3>Сдача в ремонт Онлайн</h3>
 					</div>
 					<p>Если Вам необходимо обратиться в Сервисный Центр, выберите свой город из списка ниже</p>
-					<div class="city-select">
-						<select class="form-select">
-							<option value="">Выберите город</option>
-							<option value="">Выберите город 1</option>
-							<option value="">Выберите город 2</option>
-							<option value="">Выберите город 3</option>
-						</select>
-					</div>
 					<div class="sServises__table-wrap">
-						<table class="table">
-								<tr>
-									<td>
-										<div><a class="text-secondary" href="#">На карте</a></div>
-									</td>
-									<td>
-										<div>г.Абакан</div>
-									</td>
-									<td>
-										<div>ООО &quot;Инструмент&quot;</div>
-									</td>
-									<td>
-										<div>ул. Пушкина, 211, литер 3В</div>
-									</td>
-									<td>
-										<div>(3902) 34 54 66</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div><a class="text-secondary" href="#">На карте</a></div>
-									</td>
-									<td>
-										<div>г.Абакан</div>
-									</td>
-									<td>
-										<div>ИП Подоплелова Т.И.</div>
-									</td>
-									<td>
-										<div>ул. Итыгина д. 10Ж</div>
-									</td>
-									<td>
-										<div>(3902)28-57-15</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div><a class="text-secondary" href="#">На карте</a></div>
-									</td>
-									<td>
-										<div>г.Белгород</div>
-									</td>
-									<td>
-										<div>ИП Шабанова Е. Ю.</div>
-									</td>
-									<td>
-										<div>Просп.Богдана Хмельницкого 127</div>
-									</td>
-									<td>
-										<div>8-950-718-80-34</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div><a class="text-secondary" href="#">На карте</a></div>
-									</td>
-									<td>
-										<div>г.Владивосток</div>
-									</td>
-									<td>
-										<div>ООО &quot;Бизнесстройинструмент&quot;</div>
-									</td>
-									<td>
-										<div>пр-т 100-летия Владивостоку, 113</div>
-									</td>
-									<td>
-										<div>(4232) 31 59 08</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div><a class="text-secondary" href="#">На карте</a></div>
-									</td>
-									<td>
-										<div>г.Волжский</div>
-									</td>
-									<td>
-										<div>ООО &quot;Инструмент-Сервис&quot;</div>
-									</td>
-									<td>
-										<div>ул. Большевистская, 70 &quot;б&quot;</div>
-									</td>
-									<td>
-										<div>(8443) 27 03 03</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div><a class="text-secondary" href="#">На карте</a></div>
-									</td>
-									<td>
-										<div>г.Ижевск</div>
-									</td>
-									<td>
-										<div>ИП Данилов М.В.</div>
-									</td>
-									<td>
-										<div>ул.Пойма д.7</div>
-									</td>
-									<td>
-										<div>(3412) 90-80-94</div>
-									</td>
-								</tr>
+						<table class="table table-city">
+							<thead class="d-none">
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</thead>
+							<tbody>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Абакан</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент&quot;</div>
+											</td>
+											<td>
+												<div>ул. Пушкина, 211, литер 3В</div>
+											</td>
+											<td>
+												<div>(3902) 34 54 66</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Абакан</div>
+											</td>
+											<td>
+												<div>ИП Подоплелова Т.И.</div>
+											</td>
+											<td>
+												<div>ул. Итыгина д. 10Ж</div>
+											</td>
+											<td>
+												<div>(3902)28-57-15</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Белгород</div>
+											</td>
+											<td>
+												<div>ИП Шабанова Е. Ю.</div>
+											</td>
+											<td>
+												<div>Просп.Богдана Хмельницкого 127</div>
+											</td>
+											<td>
+												<div>8-950-718-80-34</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Владивосток</div>
+											</td>
+											<td>
+												<div>ООО &quot;Бизнесстройинструмент&quot;</div>
+											</td>
+											<td>
+												<div>пр-т 100-летия Владивостоку, 113</div>
+											</td>
+											<td>
+												<div>(4232) 31 59 08</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Ижевск</div>
+											</td>
+											<td>
+												<div>ИП Данилов М.В.</div>
+											</td>
+											<td>
+												<div>ул.Пойма д.7</div>
+											</td>
+											<td>
+												<div>(3412) 90-80-94</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Абакан</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент&quot;</div>
+											</td>
+											<td>
+												<div>ул. Пушкина, 211, литер 3В</div>
+											</td>
+											<td>
+												<div>(3902) 34 54 66</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Абакан</div>
+											</td>
+											<td>
+												<div>ИП Подоплелова Т.И.</div>
+											</td>
+											<td>
+												<div>ул. Итыгина д. 10Ж</div>
+											</td>
+											<td>
+												<div>(3902)28-57-15</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Белгород</div>
+											</td>
+											<td>
+												<div>ИП Шабанова Е. Ю.</div>
+											</td>
+											<td>
+												<div>Просп.Богдана Хмельницкого 127</div>
+											</td>
+											<td>
+												<div>8-950-718-80-34</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Владивосток</div>
+											</td>
+											<td>
+												<div>ООО &quot;Бизнесстройинструмент&quot;</div>
+											</td>
+											<td>
+												<div>пр-т 100-летия Владивостоку, 113</div>
+											</td>
+											<td>
+												<div>(4232) 31 59 08</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Ижевск</div>
+											</td>
+											<td>
+												<div>ИП Данилов М.В.</div>
+											</td>
+											<td>
+												<div>ул.Пойма д.7</div>
+											</td>
+											<td>
+												<div>(3412) 90-80-94</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Абакан</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент&quot;</div>
+											</td>
+											<td>
+												<div>ул. Пушкина, 211, литер 3В</div>
+											</td>
+											<td>
+												<div>(3902) 34 54 66</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Абакан</div>
+											</td>
+											<td>
+												<div>ИП Подоплелова Т.И.</div>
+											</td>
+											<td>
+												<div>ул. Итыгина д. 10Ж</div>
+											</td>
+											<td>
+												<div>(3902)28-57-15</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Белгород</div>
+											</td>
+											<td>
+												<div>ИП Шабанова Е. Ю.</div>
+											</td>
+											<td>
+												<div>Просп.Богдана Хмельницкого 127</div>
+											</td>
+											<td>
+												<div>8-950-718-80-34</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Владивосток</div>
+											</td>
+											<td>
+												<div>ООО &quot;Бизнесстройинструмент&quot;</div>
+											</td>
+											<td>
+												<div>пр-т 100-летия Владивостоку, 113</div>
+											</td>
+											<td>
+												<div>(4232) 31 59 08</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Волжский</div>
+											</td>
+											<td>
+												<div>ООО &quot;Инструмент-Сервис&quot;</div>
+											</td>
+											<td>
+												<div>ул. Большевистская, 70 &quot;б&quot;</div>
+											</td>
+											<td>
+												<div>(8443) 27 03 03</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div><a class="text-secondary" href="#">На карте</a></div>
+											</td>
+											<td>
+												<div>г.Ижевск</div>
+											</td>
+											<td>
+												<div>ИП Данилов М.В.</div>
+											</td>
+											<td>
+												<div>ул.Пойма д.7</div>
+											</td>
+											<td>
+												<div>(3412) 90-80-94</div>
+											</td>
+										</tr>
+							</tbody>
 						</table>
 					</div>
 				</div>
@@ -1416,7 +1776,6 @@
 				</div>
 			</div>
 		</div>
-		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/dropzone/min/dropzone.min.js"></script>
@@ -1425,6 +1784,7 @@
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/datatables.net/js/jquery.dataTables.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

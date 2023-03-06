@@ -898,3 +898,11 @@ h3{
 .btn-sm{
 	font-weight: normal;
 }
+
+
+.prod-item__compare.active,
+.prod-item__bookmarks.active,
+.blue-line__icon-link.active,
+.mob-menu__icon-box.active  {
+    color: var(--bs-primary)
+}

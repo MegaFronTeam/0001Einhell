@@ -1,13 +1,21 @@
 @use "sass:math";
+:root {
+	--fancybox-content-bg: none;
+}
 
+.fancybox__content {
+	padding: 0;
+	max-width: 100%;
+}
 .modal-win {
-	max-width: 555px!important;
-	width: 100% !important;
+	max-width: 100%;
+	width: 555px!important; 
 	position: relative;
+	background-color: #fff;
 	padding: 36px 0 48px 0;
 	&--goods {
 		padding: rem(60) rem(30) rem(40) !important;
-		max-width: 670px !important;		
+		width: 670px !important;		
 		&::before {
 			content: '';
 			position: absolute;
@@ -299,4 +307,45 @@ a {
 			}
 		}
 	}
+}
+
+@include media-breakpoint-down(xs) {
+
+	.fancybox__container {
+		width: 100% !important;
+		min-height: 100%; 
+		transform: none !important;
+	}
+}
+
+
+
+
+
+.fancybox-throwOutUp {
+  animation: 0.25s ease both fancybox-throwOutUp;
+}
+
+.fancybox-throwOutDown {
+  animation: 0.25s ease both fancybox-throwOutDown;
+}
+
+@keyframes fancybox-throwOutUp {
+  from {
+    transform: translate3d(0, -5%, 0);
+    opacity: 0;
+  }
+	
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes fancybox-throwOutDown {
+  to {
+    transform: translate3d(0, 10%, 0);
+    opacity: 0;
+  }
 }

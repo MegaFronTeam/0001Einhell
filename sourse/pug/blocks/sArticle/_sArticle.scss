@@ -132,7 +132,8 @@
 		.icon{
 			fill: none;
 			color: $body-color;
-			// stroke: $primary;
+			
+			stroke: currentColor;
 			stroke-width: 2px;
 			font-size: 9px;
 			margin-left: 8px;

@@ -39,6 +39,7 @@
 	&__item{
 		// background-color: $gray-100; 
 		margin-bottom: 60px;
+		
 		// padding: 4px 12px 25px;
 		// @include media-breakpoint-up(md){
 			// 	// margin-bottom: 20px;
@@ -444,8 +445,17 @@
 	}
 	&__{}
 	&__{}
+	@include media-breakpoint-down(md){
+		&__txt-col{
+			padding-left: 12px;
+		}
+	}
 	&__wrap{
 		display: flex;
+		min-height: rem(205);
+		@include media-breakpoint-down(md){
+			flex-wrap: wrap;
+		}
 	}
 	&__content {
 		padding: 4px 12px 25px;

@@ -90,6 +90,8 @@
 		justify-content: center;
 		background-color: rgba(210, 210, 210, 0.28);
 		z-index: -1;
+		opacity: 0;
+		visibility: hidden;
 	}
 	&__title{
 		font-weight: 700; 

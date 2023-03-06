@@ -2,10 +2,25 @@
 .sNewsTabs {
 		// --sPT: ;
 		// --sPB: ;
-		// --sTPB: ;
 		@include media-breakpoint-up(lg) {
-		margin-bottom: rem(100);
+			margin-bottom: rem(100);
 		}
+		
+		// .tabs__ca[]
+		.section-title{
+		--sTPB: 0;
+
+	}
+	.tabs__wrap{
+		padding-top: var(	--sTPB);
+		position: relative;
+		.sNewsBox__all-links{
+			position: absolute;
+			right: 0;
+			bottom: 100%;
+			margin-bottom: 10px;
+		}
+	}
 	.tabs__caption{
 		display: flex;
 	}
@@ -141,7 +156,7 @@
 					border-radius: 5px;
 					&__img-wrap{
 						flex:  0 0 auto;
-							@include media-breakpoint-down(sm){
+							@include media-breakpoint-up(sm){
 
 								width: 145px;
 							}
@@ -149,6 +164,7 @@
 					}
 					&__caption{
 						padding-right: 30px;
+						flex-grow: 1;
 					}
 			}
 		}

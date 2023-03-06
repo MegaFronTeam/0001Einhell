@@ -526,6 +526,8 @@ function eventHandler() {
 		}
 		else{
 			$(this).addClass('active');
+			$(".search-dd input").focus();
+
 		}
 		event.stopPropagation();
 		document.body.addEventListener('click', removeSearchMissClick);
@@ -557,6 +559,35 @@ function eventHandler() {
 	$('.cat-aside__header').click(function() {
 		$('.cat-aside').toggleClass('active');
 		allPanels.slideToggle();
+	});
+
+
+
+	$('.table-city').DataTable({
+		language: {
+			"decimal": "",
+			"emptyTable": "No data available in table",
+			"info": "Показано от _START_ до _END_ из _TOTAL_ ",
+			"infoEmpty": "Показано от 0 до 0 из 0 ",
+			"infoFiltered": "(filtered from _MAX_ total entries)",
+			"infoPostFix": "",
+			"thousands": ",",
+			"lengthMenu": "Показать _MENU_ ",
+			"loadingRecords": "Loading...",
+			"processing": "",
+			"search": "Поиск:",
+			"zeroRecords": "No matching records found",
+			"paginate": {
+				"first": "First",
+				"last": "Last",
+				"next": "Вперед",
+				"previous": "Назад"
+			},
+			"aria": {
+				"sortAscending": ": activate to sort column ascending",
+				"sortDescending": ": activate to sort column descending"
+			}
+		}
 	});
 
 

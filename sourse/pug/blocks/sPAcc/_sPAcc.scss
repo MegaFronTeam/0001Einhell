@@ -92,6 +92,7 @@
 		border: 1px solid $gray-310;
 		// border-top: none;
 		margin-top: -1px;
+		color: $body-color;
 		&:first-child{
 			border-radius: $border-radius $border-radius 0px 0px;
 		}
