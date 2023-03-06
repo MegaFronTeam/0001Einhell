@@ -155,6 +155,9 @@
 		}
 	}
 	&__item{
+		border-radius: $border-radius;
+		position: relative;
+		overflow: hidden;
 		@include media-breakpoint-up(xl){
 
 			grid-column: 7 /10;
