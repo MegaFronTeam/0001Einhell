@@ -3,7 +3,7 @@ const JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
 	modalCall() {
-		const link = '[data-fancybox="modal"], .link-modal-js';
+		const link = '[data-fancybox="modal"], .link-modal-js, .link-modal';
 
 		Fancybox.bind(link, {
 			arrows: false,

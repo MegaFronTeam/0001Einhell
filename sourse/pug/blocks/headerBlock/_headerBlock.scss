@@ -42,7 +42,8 @@
 		overflow: hidden;
 		border-radius: $border-radius;
 			@include media-breakpoint-down(lg){
-				@include block(699, 424);
+				padding: 0;
+				@include block(611, 522);
 			}
 		// height: 500px;
 		height: 100%;
