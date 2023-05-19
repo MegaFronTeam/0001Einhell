@@ -826,6 +826,7 @@
 			//border-top-left-radius: 0;
 			//border-bottom-left-radius: 0;
 			margin-left: -1px;
+			padding-right: 40px;
 			@include media-breakpoint-up(xl) {
 				width: 290px;
 			}
@@ -890,14 +891,21 @@
 	}
 	&__btn{
 		@extend .btn;
-		@extend .btn-primary;
+		//@extend .btn-primary;
 		padding-left: 2px;
-		padding-right: 2px;
+		position: absolute;
+		.icon{
+
+		color: $primary !important;
+		}
+		right: 10px;
+		padding: rem(9);
+		//padding-right: 2px;
 		@include media-breakpoint-up(xl) {
-			padding-left: 10px;
+			//padding-left: 10px;
 		}
 		@include media-breakpoint-down(xl) {
-			min-width: 165px;
+			//min-width: 165px;
 		}
 	}
 }
