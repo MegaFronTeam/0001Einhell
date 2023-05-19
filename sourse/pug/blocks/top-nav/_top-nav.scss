@@ -128,7 +128,7 @@
 			padding: 19px 0px;
 		}
 		@include media-breakpoint-up(xl){
-			padding: 19px 25px;
+			padding: 0;
 		}
 		--dd-scale: 0;
 		&.active{
@@ -492,6 +492,7 @@
 	padding: 26px 30px 24px;
 
 	&__search-row{
+
 		& > *{
 			margin-bottom: 20px;
 		}
@@ -774,6 +775,9 @@
 }
 
 .search-dd{
+	@include media-breakpoint-down(xl){
+
+
 	color: $body-color;
 	@include mt();
 	transform-origin: top center;
@@ -793,20 +797,22 @@
 	max-height: calc((var(--vh, 1vh) * 100) - var(--top-nav-bot));
 
 	padding: 30px 15px;
-	@include media-breakpoint-up(xl){
-		padding: 30px 40px;
 	}
-	@include media-breakpoint-up(xxl){
-		padding: 49px 98px;
-	}
+	//@include media-breakpoint-up(xl){
+	//	padding: 30px 40px;
+	//}
+	//@include media-breakpoint-up(xxl){
+	//	padding: 49px 98px;
+	//}
 
 	&__row{
-
+		--bs-gutter-x:0;
 	}
 	&__search-row{
 		@include roww(0);
 		margin-right: -1px;
-		margin-bottom: 30px;
+
+		//margin-bottom: 30px;
 	}
 	&__input-wrap{
 		select{
@@ -817,9 +823,12 @@
 		
 		input{
 			// border-left: none;
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
+			//border-top-left-radius: 0;
+			//border-bottom-left-radius: 0;
 			margin-left: -1px;
+			@include media-breakpoint-up(xl) {
+				width: 290px;
+			}
 		}
 	}
 	.form-control, .form-select{
@@ -882,7 +891,14 @@
 	&__btn{
 		@extend .btn;
 		@extend .btn-primary;
-		min-width: 165px;
+		padding-left: 2px;
+		padding-right: 2px;
+		@include media-breakpoint-up(xl) {
+			padding-left: 10px;
+		}
+		@include media-breakpoint-down(xl) {
+			min-width: 165px;
+		}
 	}
 }
 
@@ -894,6 +910,7 @@
 	top: var(--top-nav-bot, 60px);
 	height: calc((var(--vh, 1vh) * 100) - var(--top-nav-bot, 60px));
 	width: 100%;
+
 
 	left: -120vw;
 	&.active{
