@@ -225,6 +225,10 @@
 		--bs-gutter-x: 1rem;
 		// @include roww(0px);
 	}
+	&__dd-btn-toggle{
+		position: relative;
+		z-index: 3;
+	}
 	&__dd-btn{
 		min-height: 100%;
 		display: flex;
@@ -265,7 +269,7 @@
 		color: $body-color;
 		background-color: transparent;
 		--dd-scale: 0;
-		&:hover{
+		&--hover:hover{
 			--fc-icon: #{$primary};
 			color: $primary;
 			background-color: $white;
@@ -300,7 +304,9 @@
 				position: relative;
 				z-index: 4;
 			}
-			&:hover {
+			&.active {
+				--fc-icon: #{$primary};
+				--dd-scale: 1;
 				span{
 					color: #fff;
 				}

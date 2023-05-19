@@ -590,6 +590,20 @@ function eventHandler() {
 		}
 	});
 
+	document.addEventListener("click", function(e){
+		let  target = e.target.closest(".blue-line__dd-btn-toggle");
+		let parent = e.target.closest(".blue-line__dd-btn--lc");
+		if (target){
+			$(".blue-line__dd-btn--lc").toggleClass("active");
+			console.log(1)
+		}
+		if(!parent && $(".blue-line__dd-btn--lc").hasClass("active")){
+			console.log(2)
+			$(".blue-line__dd-btn--lc").toggleClass("active");
+		}
+
+
+	})
 
 };
 if (document.readyState !== 'loading') {
