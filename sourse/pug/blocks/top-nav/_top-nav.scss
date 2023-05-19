@@ -406,6 +406,7 @@
 	&__cart{
 		//padding: 6px 0;
 		// margin-right: 23px;
+		position: relative;
 		display: flex;
 		align-items: center; 
 		color: $body-color;
@@ -435,14 +436,21 @@
 	}
 	&__number{
 		position: absolute;
-		color: $primary;
-		left: 50%;
-		bottom: -2px;
+		color: #ffffff;
+		background-color: var(--bs-primary);
+		right: -10px;
+		top: -2px;
 		transform: translateX(-50%);
 
 		font-weight: 500;
-		font-size: 12px;
+		font-size: 10px;
 		line-height: math.div(14, 12);
+		border-radius:50%;
+		width: 14px;
+		height: 14px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	&__cart-txt{
 		font-size: 12px;
