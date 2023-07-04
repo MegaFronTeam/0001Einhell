@@ -473,6 +473,7 @@ form {
 
 
 .filter-bl {
+	background-color: #fff;
 	@include media-breakpoint-up(lg){
 		background-color: transparent;
 		display: block;
@@ -806,7 +807,7 @@ form {
 				display: flex;
 				justify-content: space-between;
 				@include media-breakpoint-down(lg) {
-					margin-bottom: 30px;
+					margin-bottom: 50px;
 				}
 				label{
 					.form-wrap__text-end,

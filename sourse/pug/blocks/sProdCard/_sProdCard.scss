@@ -118,7 +118,7 @@
 				width: 8px;
 				height: 8px;
 				border-radius: 50%;
-				background-color: #35BD63;
+				background-color: var(--status-color, #35BD63);
 			}
 		}
 		p {

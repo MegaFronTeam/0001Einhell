@@ -100,6 +100,9 @@
 	}
 	//t-table
 	&__t-table{
+		@include media-breakpoint-down(md) {
+			margin-bottom: 16px;
+		}
 
 	}
 	&__t-item{
@@ -123,7 +126,7 @@
 		}
 		@include media-breakpoint-down(md) {
 			&:not(:first-child){
-				margin-top: 30px;
+				margin-top: 26px;
 			}
 		}
 	}
@@ -149,7 +152,7 @@
 			}
 		}
 		@include media-breakpoint-down(md) {
-			margin-bottom: -20px;
+			// margin-bottom: -20px;
 		}
 	}
 	&__s-item{
@@ -158,7 +161,7 @@
 		}
 		@include media-breakpoint-down(md) {
 			&:not(:first-child) {
-				margin-top: 26.3px;
+				margin-top: 26px;
 			}
 		}
 		@include media-breakpoint-up(md){
