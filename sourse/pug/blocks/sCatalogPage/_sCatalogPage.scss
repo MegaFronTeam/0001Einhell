@@ -480,6 +480,10 @@ form {
 	}
 	//pop-up css
 	@include media-breakpoint-down(lg){
+		.form-wrap{
+			padding-bottom: rem(110);
+			position: relative;
+		}
 		display: block;
 		position: fixed;
 		overflow-y: auto;
@@ -546,8 +550,8 @@ form {
 			flex-direction: column;
 			//for accept filter btn
 			padding-bottom: rem(25px);
-			margin-bottom: 30px;
-			position: relative;
+			// margin-bottom: 30px;
+			// position: relative;
 			// min-height: calc(100vh - 80px);
 			//
 			.check-box-filter-group{
@@ -807,7 +811,7 @@ form {
 				display: flex;
 				justify-content: space-between;
 				@include media-breakpoint-down(lg) {
-					margin-bottom: 50px;
+					margin-bottom: 52px;
 				}
 				label{
 					.form-wrap__text-end,
