@@ -2,7 +2,7 @@
 @use "sass:math";
 
 .sOrder {
-	--title-w: 100px;
+	--title-w: 120px;
 
 	// --sTPB: 24px;
 
@@ -108,7 +108,7 @@
 			width: 100%;
 			margin-bottom: 6px;
 			@include media-breakpoint-up(md){
-				width: var(--title-w, 100px);
+				width: var(--title-w, 120px);
 				margin-bottom: 0;
 
 				min-height: 40px;
@@ -122,7 +122,7 @@
 		.custom-input{
 			margin-bottom: 30px;
 			@include media-breakpoint-up(md){
-				margin-left: var(--title-w, 100px);
+				margin-left: var(--title-w, 120px);
 			}
 			&__input {
 				clip: unset;
@@ -146,7 +146,7 @@
 			width: 100%;
 			margin-bottom: 12px;
 			@include media-breakpoint-up(md){
-				width: var(--title-w, 100px);
+				width: var(--title-w, 120px);
 				margin-bottom: 0;
 			}
 		}
@@ -210,7 +210,7 @@
 			justify-content: center;
 
 			.icon{
-				color: $primary;
+				color: var(--bs-primary);
 				font-size: 22px;
 			}
 
@@ -290,8 +290,8 @@
 		}
 		&__way-label{
 			input:checked + .form-wrap__way{
-				border: 1px solid $primary;
-				background-color: $primary;
+				border: 1px solid var(--bs-primary);
+				background-color: var(--bs-primary);
 				--txt-col: #{$white};
 				color: $white;
 			}
@@ -304,10 +304,10 @@
 			background-color: #D2D2D2;
 			border-radius: $border-radius;
 			--txt-col: #{$body-color};
-			// color: $primary;
+			// color: var(--bs-primary);
 			font-weight: 300;
 			&:hover{
-				border-color: $primary;
+				border-color: var(--bs-primary);
 			}
 
 			display: flex;
@@ -395,7 +395,7 @@
 		width: 20px;
 		height: 20px;
 		margin-right: 10px;
-		border: 1px solid $primary;
+		border: 1px solid var(--bs-primary);
 
 		position: relative;
 		&:before{
@@ -406,7 +406,7 @@
 			top: 50%;
 			left: 50%;
 			transform: translateX(-50%) translateY(-50%);
-			background-color: $primary;
+			background-color: var(--bs-primary);
 			width: calc(100% - 6px);
 			height: calc(100% - 6px);
 		}
@@ -501,7 +501,7 @@
 
 		background-color: $white!important;
 		&:hover{
-			background-color: $primary!important;
+			background-color: var(--bs-primary)!important;
 		}
 	}
 	&__f-data{
@@ -629,7 +629,7 @@
 			margin-bottom: 12px;
 		}
 
-		color: $primary;
+		color: var(--bs-primary);
 	}
 	&__price--old{
 		font-size: 14px;
@@ -649,7 +649,7 @@
 	&__amount-col{
 		text-align: right;
 		@include media-breakpoint-up(sm){
-			min-width: 100px;
+			min-width: 120px;
 		}
 		@include media-breakpoint-up(lg){
 			min-width: 0;
