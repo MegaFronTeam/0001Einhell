@@ -302,7 +302,7 @@
 
 			border: 1px solid #D2D2D2;
 			background-color: #D2D2D2;
-			border-radius: $border-radius;
+			border-radius:var(--bs-border-radius);
 			--txt-col: #{$body-color};
 			// color: var(--bs-primary);
 			font-weight: 300;
@@ -423,7 +423,7 @@
 	&__box{
 		 
 		background: #2A2D30;
-		border-radius: $border-radius;
+		border-radius: var(--bs-border-radius);
 		color: #fff;
 		padding: 30px 30px;
 		// @include media-breakpoint-up(xsm){
@@ -621,7 +621,6 @@
 		}
 		@include media-breakpoint-up(sm){
 			font-size: 14px;
-			line-height: math.div(20, 14);
 		}
 
 		margin-bottom: 12px;

@@ -5,4 +5,26 @@
   --bs-link-color: #007162;
   --bs-link-color-rgb: 0 113 97;
   --bs-link-hover-color-rgb: var(--bs-primary-dark);
+  --bs-border-radius: 0;
+
+  .g-item-alt__price--new{
+    font-family: inherit;
+  }
+
+  .btn{
+    --bs-btn-padding-y: 4px;
+    --bs-btn-font-size: 1rem;
+    text-transform: none;
+    --bs-btn-line-height: 1;
+    --bs-btn-font-weight: 400;
+    --bs-btn-border-radius: var(--bs-border-radius);
+  }
+  @include media-breakpoint-up(sm){
+    .g-item-alt__title {
+      font-size: 12px;
+    }
+  }
+  a{
+    text-decoration: underline;
+  }
 }

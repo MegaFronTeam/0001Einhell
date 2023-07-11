@@ -892,11 +892,11 @@ h3{
 }
 .btn{
 	text-transform: uppercase;
-	font-weight: 600;
+  --bs-btn-font-weight: 600;
 }
 
 .btn-sm{
-	font-weight: normal;
+  --bs-btn-font-weight: normal;
 }
 
 

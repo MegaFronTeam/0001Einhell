@@ -152,7 +152,7 @@ function styles() {
 function common() {
     return src(
         [
-            sourse + '/js/common.js',
+            sourse + '/js/*.js',
             // sourse + '/pug/**/*.js',
         ])
         // .pipe(babel())
@@ -247,7 +247,7 @@ function startwatch() {
     // watch([sourse + '/js/libs.js'], { usePolling: true }, scripts);
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy);
 
-    watch([sourse + '/js/common.js'], { usePolling: true }, common);
+    watch([sourse + '/js/*.js'], { usePolling: true }, common);
     // watch(sourse + '/img', { usePolling: true }, img);
 }
 
