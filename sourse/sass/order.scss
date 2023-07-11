@@ -27,8 +27,8 @@ $output-bourbon-deprecation-warnings: false;
 
 // Layout & components
 @import "./node_modules/bootstrap/scss/root";
-@import "./node_modules/bootstrap/scss/reboot";
-@import "./node_modules/bootstrap/scss/type";
+//@import "./node_modules/bootstrap/scss/reboot";
+//@import "./node_modules/bootstrap/scss/type";
 // @import "./node_modules/bootstrap/scss/images";
 //@import "./node_modules/bootstrap/scss/containers";
 @import "./node_modules/bootstrap/scss/grid";
@@ -59,7 +59,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/spinners";
 
 // Helpers
-@import "./node_modules/bootstrap/scss/helpers";
+//@import "./node_modules/bootstrap/scss/helpers";
 
 // Utilities
 @import "./node_modules/bootstrap/scss/utilities/api";
@@ -79,3 +79,7 @@ $output-bourbon-deprecation-warnings: false;
 //  margin-left: 0;
 
 //}
+
+.mono, .sOrder__big-title, .sOrder__login-txt, .section-title h2, h1, h3{
+  font-family: inherit;
+}
