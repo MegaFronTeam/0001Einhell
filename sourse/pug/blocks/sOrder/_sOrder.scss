@@ -370,6 +370,10 @@
 	&__polite{
 		font-size: 12px;
 		line-height: math.div(20, 14);
+	  a{
+		color: var(--bs-primary);
+
+	  }
 	}
 	&__f-btn{
 		@extend .btn;

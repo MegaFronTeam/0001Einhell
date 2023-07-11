@@ -67,7 +67,7 @@ $output-bourbon-deprecation-warnings: false;
 
 
 @import "root";
-@import "base";
+//@import "base";
 @import '../pug/blocks/form-wrap/form-wrap';
 @import '../pug/blocks/sOrder/_sOrder.scss';
 @import "themes/base-theme";
