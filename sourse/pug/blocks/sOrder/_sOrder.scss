@@ -158,8 +158,8 @@
 			display: block;
 
 			input:checked + .form-wrap__d-item{
-				border-color: #2A2D30;
-				background-color: #2A2D30;
+				border-color: var(--checked-color, #2A2D30);
+				background-color: var(--checked-color, #2A2D30);
 				color: $white;
 			}
 
@@ -177,8 +177,8 @@
 			color: $body-color;
 			&:hover,
 			&.active{
-				border-color: #2A2D30;
-				background-color: #2A2D30;
+				border-color: var(--checked-color, #2A2D30);
+				background-color: var(--checked-color, #2A2D30);
 				color: $white;
 			}
 
@@ -426,7 +426,7 @@
 	}
 	&__box{
 		 
-		background: #2A2D30;
+		background: var(--checked-color, #2A2D30);
 		border-radius: var(--bs-border-radius);
 		color: #fff;
 		padding: 30px 30px;
