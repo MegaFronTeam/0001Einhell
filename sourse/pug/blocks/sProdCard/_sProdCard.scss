@@ -86,6 +86,10 @@
 				stroke: currentColor;
 			}
 		}
+		  &:hover,
+          &.active {
+		  	color: var(--bs-primary);
+		  }
 	}
 
 	&__subtitle {

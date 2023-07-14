@@ -1096,9 +1096,17 @@
 	&__number{
 		position: absolute;
 		color: $body-color;
-		left: 50%;
-		bottom: -2px;
-		transform: translateX(-50%);
+		right: -5px;
+		top: -6px;
+		width: 14px;
+		height: 14px;
+		background: var(--bs-primary);
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		//transform: translateX(-50%);
 
 		font-weight: 500;
 		font-size: 12px;

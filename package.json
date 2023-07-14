@@ -51,9 +51,11 @@
     "datatables.net": "^1.13.3",
     "datatables.net-dt": "^1.13.3",
     "dropzone": "^5.7.0",
+    "equalizer": "^1.0.0",
     "inputmask": "^5.0.6",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.3",
+    "jquery-equal-height": "^1.0.4",
     "libvips": "^0.0.2",
     "swiper": "^9.0.5"
   }
