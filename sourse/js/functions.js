@@ -228,24 +228,25 @@ const JSCCommon = {
 			}
 
 		}
+	},
+	init(){
+		this.makeDDGroup([
+			'.footer-dd-group-js',
+			'.cat-aside-dd-js',
+			'.mob-menu-dd-js',
+			'.pa-orders-dd-js',
+			'.delivery-group-dd-js',
+			'.order-content-dd-js'
+		]);
 	}
 
 
 };
 
-function eventHandler() {
-	JSCCommon.makeDDGroup([
-		'.footer-dd-group-js',
-		'.cat-aside-dd-js',
-		'.mob-menu-dd-js',
-		'.pa-orders-dd-js',
-		'.delivery-group-dd-js',
-		'.order-content-dd-js'
-	]);
-}
+
 
 if (document.readyState !== 'loading') {
-	eventHandler();
+	JSCCommon.init()
 } else {
-	document.addEventListener('DOMContentLoaded', eventHandler);
+	document.addEventListener('DOMContentLoaded', JSCCommon.init);
 }

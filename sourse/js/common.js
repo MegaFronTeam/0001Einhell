@@ -196,18 +196,20 @@ const JSCCommon = {
 		})
 	},
 	//taken from good planet
+	init(){
+		this.modalCall();
+		this.tabscostume('tabs');
+		this.inputMask();
+		this.heightwindow();
+		this.customRange();
+
+	}
 };
 const $ = jQuery;
 
-function eventHandler() {
-	JSCCommon.ifie();
-	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
-	JSCCommon.inputMask();
-	JSCCommon.heightwindow();
-	JSCCommon.customRange();
+function eventHandler() { 
 
-	// JSCCommon.CustomInputFile(); 
+	JSCCommon.init();
 	// var x = window.location.host;
 	// let screenName = '06-1-768.png';
 	// if (screenName && x.includes("localhost:30")) {
