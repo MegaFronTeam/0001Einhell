@@ -32,7 +32,7 @@
     top: 3px !important;
   }
   @include media-breakpoint-up(lg) {
-    .sOrder__row > .col-lg-8 {
+    .sOrder__row > * {
       padding: 20px;
     }
   }
