@@ -667,3 +667,29 @@
 	&__{}
 	&__{}
 }
+
+// .b-sale-order-delivery-popup-wrap a{
+// 	@extend .btn, .btn-outline-white;
+
+// }
+
+.b-sale-order-delivery-popup-wrap a{
+    background: transparent;
+    border-color: #ffffff;
+		
+    color: #fff;
+    display: block;
+}
+.b-sale-order-delivery-popup-wrap a:active,
+.b-sale-order-delivery-popup-wrap a:focus,
+.b-sale-order-delivery-popup-wrap a:hover{
+	background-color: #fff;
+	border-color: #fff;
+    color: var(--bs-primary);
+}
+.b-sale-order-delivery-popup-wrap br{
+    display: none !important;
+}
+.b-sale-order-delivery-popup-wrap .ipol-dpd-pickup-container div{
+    display: none !important;
+}
