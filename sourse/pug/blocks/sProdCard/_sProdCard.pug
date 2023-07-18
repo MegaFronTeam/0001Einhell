@@ -18,9 +18,13 @@ mixin sProdCard(data)
 								+icon("bars")
 								| Сравнить
 						.col-auto
-							+e.head-link(href="#")
-								+icon("share2")
-								| Поделиться
+							.tags-row__share-toggle
+								+e.head-link()
+									+icon("share2")
+									| Поделиться
+								.tags-row__share-dropdown
+									<script src="https://yastatic.net/share2/share.js"></script>
+									div( class="ya-share2" data-curtain data-size="s" data-use-link data-copy="extraItem" data-services="messenger,odnoklassniki,telegram,whatsapp")
 			+e.main-row.row
 				.col-xl-8.col-lg-7
 					+e.head-row.row

@@ -629,6 +629,10 @@ function eventHandler() {
 	}
 	resizeCompate();
 	window.addEventListener('resize', resizeCompate, { passive: true });
+
+	$(".favorites-body ").on("click", '.prod-item__bookmarks', function(){
+		$(this).parents(".prod-item").parent().fadeOut();
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -86,7 +86,7 @@
 				stroke: currentColor;
 			}
 		}
-		  &:hover,
+
           &.active {
 		  	color: var(--bs-primary);
 		  }
@@ -1051,4 +1051,27 @@
 }
 .swiper-button-disabled{
 	opacity: 0.4;
+}
+.tags-row{
+  &__share-toggle{
+	position: relative;
+	  &:hover{
+		--d:1;
+	  }
+  }
+
+  &__share-dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: max-content;
+	padding: 3px;
+	background-color: #fff;
+	box-shadow: 0 5px 5px rgba(0,0,0,.1);
+	visibility: var(--d,hidden);
+	opacity: var(--d,0);
+	padding: 0.9375rem;
+	@include  mt;
+	z-index: 100;
+  }
 }
