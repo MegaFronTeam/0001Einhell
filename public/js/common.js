@@ -648,6 +648,15 @@ function eventHandler() {
 
 		return false;
 	});
+
+	$("[data-dropdown]").click(function () {
+		console.log($(this).data("dropdown"))
+		$($(this).data("dropdown")).toggleClass('active');
+	});
+	$(".mobile-dropdown-toggle").click(function (e) {
+		e.preventDefault();
+		$(this).next().addClass('active');
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

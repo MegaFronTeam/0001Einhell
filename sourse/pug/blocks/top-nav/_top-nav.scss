@@ -1,6 +1,42 @@
 @use "sass:math";
 
 .top-nav {
+  position: relative;
+  .search-toggle {
+	cursor: pointer;
+	letter-spacing: rem(0.54px);
+	text-transform: uppercase;
+	@include mt;
+	display: flex;
+	align-items: center;
+
+	.icon {
+	  font-size: rem(22);
+	  margin-top: rem(4);
+
+	  @include media-breakpoint-up(lg) {
+		margin-top: 0;
+		font-size: rem(20);
+
+		margin-right: rem(10);
+	  }
+
+	  // @include mt;
+	}
+
+	&:hover {
+	  color: var(--bs-primary);
+	}
+  }
+  .dropdown--search {
+	@include media-breakpoint-up(lg) {
+
+	  padding: rem(25 + 15) rem(15) rem(28 + 15);
+	}
+
+	padding: rem(15) rem(15);
+  }
+
 	border-bottom: 1px solid $gray-310;
 	background-color: $primary;
 	
