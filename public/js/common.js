@@ -633,6 +633,21 @@ function eventHandler() {
 	$(".favorites-body ").on("click", '.prod-item__bookmarks', function(){
 		$(this).parents(".prod-item").parent().fadeOut();
 	})
+
+
+	$('.js_sales_page_sub_filter__arrow').click(function (){
+
+		$('.sales_page_sub_filter').toggleClass('sales_page_sub_filter__mb_open');
+		$(this).toggleClass('sales_page_sub_filter__arrow__up');
+
+		if ($(this).hasClass('sales_page_sub_filter__arrow__up')) {
+			$(this).html('Скрыть');
+		} else {
+			$(this).html('Показать все фильтры');
+		}
+
+		return false;
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
