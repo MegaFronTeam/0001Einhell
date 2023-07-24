@@ -925,3 +925,13 @@ h3{
   ---bs-btn-padding-y: .4rem;
   --bs-btn-font-size: .8rem;
 }
+
+
+.form-wrap{
+	.bx-sls .bx-ui-sls-clear{
+		top: rem(3);
+	}
+	.dropdown-icon{
+		top: rem(13);
+	}
+}
