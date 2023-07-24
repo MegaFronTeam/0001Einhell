@@ -1,6 +1,8 @@
 .dropdown-block {
-	position: absolute;
-	left: 0;
+	&--search{
+
+		position: absolute;
+		left: 0;
 	top: rem(-10);
 	background-color: #ffffff;
 	z-index: -1;
@@ -8,16 +10,17 @@
 	box-shadow: 0px 16px 24px rgba(39, 58, 96, 0.25);
 	width: calc(100%);
 	display: none;
-  	z-index: 100;
+	z-index: 100;
 	&.active{
-	  display: block;
+		display: block;
 	}
 	@include media-breakpoint-down(sm) {
-
+		
 		&.active {
 			display: block;
 		}
 	}
+}
 
 	&__footer {
 		border-top: 1px solid var(--bs-primary);
