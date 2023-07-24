@@ -85,11 +85,12 @@
 		position: absolute;
 		right: rem(30);
 		top: rem(10);
+		cursor: pointer;
 
 		.icon {
 			font-size: rem(20);
 			// color: var(--bs-dark);
-			stroke: $blue;
+			stroke: var(--bs-primary);
 		}
 	}
 
