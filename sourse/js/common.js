@@ -657,6 +657,21 @@ function eventHandler() {
 		e.preventDefault();
 		$(this).next().addClass('active');
 	});
+
+	$('.dropdown-block--search input').focus(function () {
+		$('.dropdown-block--search').addClass('focus');
+	})
+	document.body.addEventListener('click', function (e) {
+		let target = e.target.closest(".dropdown-block--search");
+		if( !target
+			&& document.querySelector('.dropdown-block--search').classList.contains('focus')
+			&& $('#js_header_catalog_search_result')[0].childNodes.length === 0) {
+
+			$('.dropdown-block--search').removeClass('focus');
+		}
+
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
