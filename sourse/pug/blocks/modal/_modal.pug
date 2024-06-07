@@ -1,3 +1,5 @@
+include ../sOrder/_sOrder.pug
+
 mixin modal()
 	//  start modals
 	.d-none
@@ -80,7 +82,7 @@ mixin modal()
 				.text-center
 					button.btn.btn-primary.disabled(type="submit") Зарегистрироваться
 		// #modal-reg
-		+b.modal-win(id="modal-order-request")
+		+b.modal-win--order-request(id="modal-order-request")
 			+form-wrap()
 				.modal-win__title.text-center.mb-24 Запрос счёта
 				+e.inputs
@@ -107,4 +109,28 @@ mixin modal()
 				.text-center
 					button.btn.btn-primary.disabled.mb-12(type="submit") Отправить
 					+polite()
+			+e.aside
+				+e.side-wrap
+					+e.order-list
+						span.accepted КУПОН ПРИМЕНЕН
+						+input('Введите купон', 'text')
+							.done
+					.price-dd-group-js.active
+						.dd-head-js состав заказа
+						.dd-content-js.active
+							+e.sub-price
+								| Товары
+								span 4 30 кг
+							+e.sub-price
+								| Вес 
+								span 4 30 кг
+							+e.sub-price--discount
+								| Скидка
+								span -11 890 ₽
+					+e.total-price
+						| ИТОГО
+						span 33 294 ₽
+				+e.product-list
+					-for(let i = 0; i < 10; i++)
+						+goodsItemAlt('2', false, '')
 // end modals

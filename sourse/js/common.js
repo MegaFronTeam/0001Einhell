@@ -371,7 +371,8 @@ function eventHandler() {
 		'.mob-menu-dd-js',
 		'.pa-orders-dd-js',
 		'.delivery-group-dd-js',
-		'.order-content-dd-js'
+		'.order-content-dd-js',
+		'.price-dd-group-js',
 	]);
 
 	//filter custom pop-up
