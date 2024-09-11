@@ -10,6 +10,26 @@ mixin sCart(data)
 					+cartItem('Шуруповерт')
 					+cartItem('Шуруповерт с 6 положениями регулировки')
 					+cartItem('Шуруповерт с 6 положениями регулировки')
+
+					+e.row-tiny
+						+b.tiny-item-cart.tinny-item-js
+							.tinny-template.d-none Данный товар мы доставим бесплатно! Доставка осуществляется транспортной компанией DPD и CDEK. *Существуют некоторые ограничения. Подробности по ссылке: https://shop-einhell.ru/news/besplatnaya-dostavka/
+							+b.shipping-free
+								+e.head
+									img(src="img/cart-free.svg", alt="")
+									+e.price 6 531₽
+								+e.progress
+									+e.progress-bar(style='width: 70%')
+							+e.txt Бесплатная доставка
+
+						+b.tiny-item-cart.tinny-item-js
+							.tinny-template.d-none Данный товар мы доставим бесплатно! Доставка осуществляется транспортной компанией DPD и CDEK. *Существуют некоторые ограничения. Подробности по ссылке: https://shop-einhell.ru/news/besplatnaya-dostavka/
+							+b.bank-block
+								+e.text доступны: рассрочка и&nbsp;кредит от&nbsp;сбера
+								img(src="img/sber2.png", alt="") 
+
+
+
 				.col-lg-4
 					+e.box
 						+e.box-head

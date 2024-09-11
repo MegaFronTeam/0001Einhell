@@ -38,6 +38,20 @@ mixin sProdCard(data)
 								+icon('star').active
 								+icon('star')
 								+e.how-much 17 отзывов
+					+b.tippy-block 
+						+e.item.tinny-item-js
+							img(src="img/tippy-1.svg", alt="")
+							.tinny-template.d-none На данный товар действует скидка!
+
+
+
+						+e.item.tinny-item-js
+							img(src="img/tippy-2.svg", alt="")
+							.tinny-template.d-none На данный товар доступен кредит от СБЕР
+						+e.item.tinny-item-js
+							img(src="img/tippy-3.svg", alt="")
+							.tinny-template.d-none Данный товар мы доставим бесплатно! Доставка осуществляется транспортной компанией DPD и CDEK. *Существуют некоторые ограничения. Подробности по ссылке: 
+								a(href="#") https://shop-einhell.ru/news/besplatnaya-dostavka/
 					+prodCardSliders()
 					+productTabs()
 				+e.side-col.col-xl-4.col-lg-5
